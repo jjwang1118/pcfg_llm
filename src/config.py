@@ -49,7 +49,10 @@ def build_paths(config: dict) -> dict:
     paths["model"] = {
         "name": model_name,
         "path": model_path,
-        **params,
+        "max_new_tokens": params.get("max_new_tokens", 1024),
+        "temperature": params.get("temperature", 0.7),
+        "top_p": params.get("top_p", 0.9),
+        "repetition_penalty": params.get("repetition_penalty", 1.1),
     }
 
     # --- 資料集 ---

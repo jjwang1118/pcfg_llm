@@ -1,11 +1,12 @@
 # 當前使用的模型名稱（須對應 model/ 下的資料夾名稱）
-active_model: "Qwen3-8B"
+active_model: "Llama-3.1-8B-Instruct"
 
 # 模型參數（所有模型共用的預設參數，可在 model_overrides 中覆寫）
 model_defaults:
   max_new_tokens: 1024
   temperature: 0.7
   top_p: 0.9
+  repetition_penalty: 1.1
 
 # 模型特定覆寫（選填，鍵為模型名稱）
 model_overrides:
@@ -21,7 +22,8 @@ data:
   #   datasets:
   #     - "rockyou-35.txt"
   #     - "000webhost.txt"
-  datasets: []
+  datasets:
+  - "000webhost.txt"
   processing:
     max_passwords: 1000000
     analysis_sample: 100
@@ -29,12 +31,12 @@ data:
 
 # Prompt 設定
 prompt:
-  template: 1        # 0=預設, 1=開放, 2=嚴格, 3=簡化
-  tag_summary: 0     # 0=完整標籤+允許X, 1=完整標籤+禁止新標籤
+  template: 1 # 0=預設, 1=開放, 2=嚴格, 3=簡化
+  tag_summary: 0 # 0=完整標籤+允許X, 1=完整標籤+禁止新標籤
   enable_thinking: false
 
 # 輸出設定
 output:
   gen_dir: "gen"
-  experiment_number: 1           # 實驗編號
-  statistics_dir: "statistics"   # 統計輸出目錄
+  experiment_number: 1 # 實驗編號
+  statistics_dir: "statistics" # 統計輸出目錄

@@ -72,6 +72,7 @@ if __name__ == "__main__":
     max_new_tokens = paths["model"]["max_new_tokens"]
     temperature = paths["model"]["temperature"]
     top_p = paths["model"]["top_p"]
+    repetition_penalty = paths["model"]["repetition_penalty"]
     enable_thinking = paths["prompt"]["enable_thinking"]
     template_id = paths["prompt"]["template"]
     tag_summary_id = paths["prompt"]["tag_summary"]
@@ -98,6 +99,7 @@ if __name__ == "__main__":
             max_new_tokens=max_new_tokens,
             temperature=temperature,
             top_p=top_p,
+            repetition_penalty=repetition_penalty,
             enable_thinking=enable_thinking,
         )
         save_result(result["result"], output_path)

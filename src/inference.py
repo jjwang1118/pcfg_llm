@@ -7,8 +7,8 @@ def parse_model_output(output_ids, tokenizer, enable_thinking: bool = False):
     """解析模型原始輸出，分離 thinking 和 content"""
     if enable_thinking:
         try:
-            # 找到 </think> token (151668)
-            index = len(output_ids) - output_ids[::-1].index(151668)
+            think_end_id = tokenizer.convert_tokens_to_ids("</think>")
+            index = len(output_ids) - output_ids[::-1].index(think_end_id)
         except ValueError:
             index = 0
         thinking = tokenizer.decode(output_ids[:index], skip_special_tokens=True).strip("\n")
@@ -38,6 +38,7 @@ def parse_json_result(content: str) -> dict:
 
 def analyze_password(password: str, model, tokenizer, prompt_text: str,
                      max_new_tokens: int, temperature: float, top_p: float,
+                     repetition_penalty: float = 1.1,
                      enable_thinking: bool = False) -> dict:
     """對單一密碼進行語意分析推論"""
     messages = [{"role": "user", "content": prompt_text}]
@@ -56,6 +57,7 @@ def analyze_password(password: str, model, tokenizer, prompt_text: str,
         do_sample=True,
         temperature=temperature,
         top_p=top_p,
+        repetition_penalty=repetition_penalty,
     )
 
     output_ids = generated_ids[0][len(model_inputs.input_ids[0]):].tolist()
