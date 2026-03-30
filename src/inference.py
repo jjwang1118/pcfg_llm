@@ -20,11 +20,25 @@ def parse_model_output(output_ids, tokenizer, enable_thinking: bool = False):
 
 
 def clean_json_output(content: str) -> str:
-    """移除模型輸出中的 Markdown 代碼塊標記"""
-    content = re.sub(r'^```json\s*', '', content)
-    content = re.sub(r'^```\s*', '', content)
+    """移除模型輸出中的 Markdown 代碼塊標記，並嘗試抽取 JSON 物件"""
+    # 處理所有 code block 標記（```python, ```json, ``` 等）
+    content = re.sub(r'^```[a-zA-Z]*\s*', '', content.strip())
     content = re.sub(r'\s*```$', '', content)
-    return content.strip()
+    content = content.strip()
+
+    # 嘗試直接解析
+    try:
+        json.loads(content)
+        return content
+    except json.JSONDecodeError:
+        pass
+
+    # fallback：用 regex 抽取第一個完整的 JSON 物件 { ... }
+    match = re.search(r'\{.*\}', content, re.DOTALL)
+    if match:
+        return match.group(0).strip()
+
+    return content
 
 
 def parse_json_result(content: str) -> dict:

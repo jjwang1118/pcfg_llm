@@ -106,7 +106,9 @@ def prompt_template(password: str,tag_summary:int=0,prompt_template:int=1) -> st
         Output: {{"password": "p@ssw0rd", "segments": [{{"text": "p@ssw0rd", "tag": "LEET"}}]}}
 
         # Task
-        Analyze the following password and output ONLY valid JSON (no explanation):
+        Analyze the following password and output ONLY the raw JSON object.
+        Do NOT write any code. Do NOT use markdown. Do NOT add any explanation.
+        The response MUST start with {{ and end with }}.
 
         Password: {password}
         """
@@ -154,7 +156,10 @@ def prompt_template(password: str,tag_summary:int=0,prompt_template:int=1) -> st
         Output: {{"password": "li1980ming", "segments": [{{"text": "li", "tag": "X", "suggested_tag": "CHINESE_SURNAME", "explanation": "Common Chinese surname"}}, {{"text": "1980", "tag": "YEAR"}}, {{"text": "ming", "tag": "X", "suggested_tag": "CHINESE_GIVEN_NAME", "explanation": "Common Chinese given name"}}]}}
 
         # Task
-        Analyze the following password and output ONLY valid JSON. Remember: X tags MUST include both "suggested_tag" and "explanation" fields:
+        Analyze the following password and output ONLY the raw JSON object.
+        Do NOT write any code. Do NOT use markdown. Do NOT add any explanation.
+        The response MUST start with {{ and end with }}.
+        Remember: X tags MUST include both "suggested_tag" and "explanation" fields.
 
         Password: {password}
         """
@@ -185,7 +190,9 @@ def prompt_template(password: str,tag_summary:int=0,prompt_template:int=1) -> st
         Output: {{"password": "iloveyou", "segments": [{{"text": "i", "tag": "ENGLISH_PRON"}}, {{"text": "love", "tag": "ENGLISH_VERB"}}, {{"text": "you", "tag": "ENGLISH_PRON"}}]}}
 
         # Task
-        Analyze the following password and output ONLY valid JSON (no explanation):
+        Analyze the following password and output ONLY the raw JSON object.
+        Do NOT write any code. Do NOT use markdown. Do NOT add any explanation.
+        The response MUST start with {{ and end with }}.
 
         Password: {password}
         """
@@ -200,6 +207,8 @@ def prompt_template(password: str,tag_summary:int=0,prompt_template:int=1) -> st
 
 # Output Format
 {{"password": "{password}", "segments": [{{"text": "...", "tag": "..."}}]}}
+
+Do NOT write any code. Do NOT use markdown. Output ONLY the raw JSON object starting with {{ and ending with }}.
 
 Password: {password}
 """
