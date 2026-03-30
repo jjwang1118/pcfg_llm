@@ -28,6 +28,7 @@ data:
     max_passwords: 1000000
     analysis_sample: 100
     batch_size: 10
+    batch: false  # true=批次推論(batch_size筆/次), false=逐筆推論
 
 # Prompt 設定
 prompt:

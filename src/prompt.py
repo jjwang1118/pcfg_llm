@@ -245,7 +245,7 @@ def prompt_template_batch(passwords: list) -> str:
 # Passwords to Analyze
 {pwd_list}
 
-Output ONLY valid JSON (no explanation):
+Do NOT write any code. Do NOT use markdown. Output ONLY the raw JSON array starting with [ and ending with ].
 """
     return prompt
 

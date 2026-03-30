@@ -4,8 +4,8 @@ from datasets import load_dataset
 
 from src.config import load_config, build_paths, discover_datasets
 from src.model_loader import load_model
-from src.inference import analyze_password, save_result
-from src.prompt import prompt_template
+from src.inference import analyze_password, analyze_password_batch, save_result
+from src.prompt import prompt_template, prompt_template_batch
 from src.clean_data import clean
 from src.record import write_record
 
@@ -89,19 +89,42 @@ if __name__ == "__main__":
         template_id=template_id,
     )
 
-    # 7. 逐筆推論
-    for pwd in passwords:
-        prompt_text = prompt_template(pwd, tag_summary=tag_summary_id, prompt_template=template_id)
-        result = analyze_password(
-            password=pwd,
-            model=model,
-            tokenizer=tokenizer,
-            prompt_text=prompt_text,
-            max_new_tokens=max_new_tokens,
-            temperature=temperature,
-            top_p=top_p,
-            repetition_penalty=repetition_penalty,
-            enable_thinking=enable_thinking,
-        )
-        save_result(result["result"], output_path)
+    batch_mode = paths["data"]["batch"]
+    batch_size = paths["data"]["batch_size"]
+
+    # 7. 推論
+    if batch_mode:
+        # 批次推論：每 batch_size 筆為一組
+        for i in range(0, len(passwords), batch_size):
+            batch = passwords[i:i + batch_size]
+            prompt_text = prompt_template_batch(batch)
+            results = analyze_password_batch(
+                passwords=batch,
+                model=model,
+                tokenizer=tokenizer,
+                prompt_text=prompt_text,
+                max_new_tokens=max_new_tokens,
+                temperature=temperature,
+                top_p=top_p,
+                repetition_penalty=repetition_penalty,
+                enable_thinking=enable_thinking,
+            )
+            for res in results:
+                save_result(res, output_path)
+    else:
+        # 逐筆推論
+        for pwd in passwords:
+            prompt_text = prompt_template(pwd, tag_summary=tag_summary_id, prompt_template=template_id)
+            result = analyze_password(
+                password=pwd,
+                model=model,
+                tokenizer=tokenizer,
+                prompt_text=prompt_text,
+                max_new_tokens=max_new_tokens,
+                temperature=temperature,
+                top_p=top_p,
+                repetition_penalty=repetition_penalty,
+                enable_thinking=enable_thinking,
+            )
+            save_result(result["result"], output_path)
 

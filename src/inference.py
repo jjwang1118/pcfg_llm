@@ -106,3 +106,46 @@ def save_result(result: dict, output_path: str) -> None:
     with open(output_path, "a", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False)
         f.write("\n")
+
+
+def analyze_password_batch(passwords: list, model, tokenizer, prompt_text: str,
+                           max_new_tokens: int, temperature: float, top_p: float,
+                           repetition_penalty: float = 1.1,
+                           enable_thinking: bool = False) -> list:
+    """對一批密碼進行批次推論，回傳結果列表"""
+    messages = [{"role": "user", "content": prompt_text}]
+    text = tokenizer.apply_chat_template(
+        messages,
+        tokenize=False,
+        add_generation_prompt=True,
+        enable_thinking=enable_thinking,
+    )
+
+    model_inputs = tokenizer([text], return_tensors="pt").to(model.device)
+
+    generated_ids = model.generate(
+        **model_inputs,
+        max_new_tokens=max_new_tokens,
+        do_sample=True,
+        temperature=temperature,
+        top_p=top_p,
+        repetition_penalty=repetition_penalty,
+    )
+
+    output_ids = generated_ids[0][len(model_inputs.input_ids[0]):].tolist()
+    _, content = parse_model_output(output_ids, tokenizer, enable_thinking)
+
+    # 嘗試解析為 JSON array
+    content = clean_json_output(content)
+    # 優先找 [ ... ] array，若失敗嘗試 fallback
+    array_match_start = content.find('[')
+    if array_match_start != -1:
+        try:
+            parsed = json.loads(content[array_match_start:])
+            if isinstance(parsed, list):
+                return parsed
+        except json.JSONDecodeError:
+            pass
+
+    # fallback：回傳整批為 parse_error
+    return [{"password": p, "parse_error": True, "raw_output": content} for p in passwords]
