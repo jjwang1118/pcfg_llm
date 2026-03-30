@@ -135,17 +135,34 @@ def analyze_password_batch(passwords: list, model, tokenizer, prompt_text: str,
     output_ids = generated_ids[0][len(model_inputs.input_ids[0]):].tolist()
     _, content = parse_model_output(output_ids, tokenizer, enable_thinking)
 
-    # 嘗試解析為 JSON array
-    content = clean_json_output(content)
-    # 優先找 [ ... ] array，若失敗嘗試 fallback
-    array_match_start = content.find('[')
-    if array_match_start != -1:
-        try:
-            parsed = json.loads(content[array_match_start:])
-            if isinstance(parsed, list):
-                return parsed
-        except json.JSONDecodeError:
-            pass
+    # 先去除 code block 標記，但不做 {} 的 fallback（避免破壞 array 結構）
+    stripped = re.sub(r'^```[a-zA-Z]*\s*', '', content.strip())
+    stripped = re.sub(r'\s*```$', '', stripped).strip()
+
+    # 優先找 [ ... ] array：用括號平衡掃描找完整 array
+    pos = 0
+    while pos < len(stripped):
+        start = stripped.find('[', pos)
+        if start == -1:
+            break
+        depth = 0
+        for i, c in enumerate(stripped[start:], start):
+            if c == '[':
+                depth += 1
+            elif c == ']':
+                depth -= 1
+            if depth == 0:
+                candidate = stripped[start:i + 1]
+                try:
+                    parsed = json.loads(candidate)
+                    if isinstance(parsed, list):
+                        return parsed
+                except json.JSONDecodeError:
+                    pass
+                pos = i + 1
+                break
+        else:
+            break
 
     # fallback：回傳整批為 parse_error
-    return [{"password": p, "parse_error": True, "raw_output": content} for p in passwords]
+    return [{"password": p, "parse_error": True, "raw_output": stripped} for p in passwords]
