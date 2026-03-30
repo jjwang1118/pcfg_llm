@@ -16,7 +16,11 @@ model_overrides:
 data:
   input_dir: "data"
   # 留空或不設定則自動掃描 data/ 下所有 .txt 和 .csv 檔案
-  # 若指定則只使用列出的檔案
+  # 若指定則只使用列出的檔案（也可在執行時用 --datasets 參數覆寫）
+  # 範例：
+  #   datasets:
+  #     - "rockyou-35.txt"
+  #     - "000webhost.txt"
   datasets: []
   processing:
     max_passwords: 1000000
