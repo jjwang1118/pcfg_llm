@@ -33,9 +33,12 @@ def clean_json_output(content: str) -> str:
     except json.JSONDecodeError:
         pass
 
-    # fallback：用括號平衡掃描抽取第一個完整的 JSON 物件 { ... }
-    start = content.find('{')
-    if start != -1:
+    # fallback：掃描所有頂層 {} 區塊，逐一嘗試 json.loads，回傳第一個合法的 JSON
+    pos = 0
+    while pos < len(content):
+        start = content.find('{', pos)
+        if start == -1:
+            break
         depth = 0
         for i, c in enumerate(content[start:], start):
             if c == '{':
@@ -43,7 +46,16 @@ def clean_json_output(content: str) -> str:
             elif c == '}':
                 depth -= 1
             if depth == 0:
-                return content[start:i + 1].strip()
+                candidate = content[start:i + 1]
+                try:
+                    json.loads(candidate)
+                    return candidate.strip()
+                except json.JSONDecodeError:
+                    pass
+                pos = i + 1
+                break
+        else:
+            break  # 括號不平衡，放棄
 
     return content
 
