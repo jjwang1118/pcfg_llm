@@ -219,37 +219,6 @@ Password: {password}
         return prompt_template(password, tag_summary, 0)
 
 
-def prompt_template_batch(passwords: list) -> str:
-    """
-    Generate prompt for batch password analysis.
-    
-    Args:
-        passwords: List of passwords to analyze
-    
-    Returns:
-        Complete prompt string
-    """
-    pwd_list = "\n".join([f"  {i+1}. {p}" for i, p in enumerate(passwords)])
-    
-    prompt = f"""You are a password semantic analyzer. Segment each password and tag the components.
-
-# Available Tags
-{tag_description(0)}
-
-# Output Format Requirements
-- Return a JSON array with analysis for each password
-- Each segment MUST use exactly: {{"text": "...", "tag": "..."}}
-- Do NOT add extra fields like "note", "description", or "explanation"
-- Structure: [{{"password": "...", "segments": [{{"text": "...", "tag": "..."}}]}}]
-
-# Passwords to Analyze
-{pwd_list}
-
-Do NOT write any code. Do NOT use markdown. Output ONLY the raw JSON array starting with [ and ending with ].
-"""
-    return prompt
-
-
 def prompt_explain_unknown_tags(segments: list) -> str:
     """
     Generate prompt to explain unknown tags and suggest whether they should be added.
