@@ -6,7 +6,9 @@ import os
 
 def visualize_single_password(password: str, segments_8b: list, segments_08b: list, 
                                cut_position_func, caculate_jaccard_distance_func,
-                               cut_position_with_tags_func, save_path: str = None):
+                               cut_position_with_tags_func, save_path: str = None,
+                               first_model_name: str = 'First Model',
+                               second_model_name: str = 'Second Model'):
     """視覺化單個密碼在兩個模型的切割位置"""
     
     # 取得切割位置
@@ -65,8 +67,8 @@ def visualize_single_password(password: str, segments_8b: list, segments_08b: li
     seg_summary_8b = " | ".join([f"{s['text'].strip()}({s.get('tag','X')})" for s in segments_8b if s['text'].strip()])
     seg_summary_08b = " | ".join([f"{s['text'].strip()}({s.get('tag','X')})" for s in segments_08b if s['text'].strip()])
     
-    title_8b = f'8B Model: {seg_summary_8b}'
-    title_08b = f'0.8B Model: {seg_summary_08b}'
+    title_8b = f'{first_model_name}: {seg_summary_8b}'
+    title_08b = f'{second_model_name}: {seg_summary_08b}'
     
     # 8B 模型 (切割線紅色, tag黑色)
     draw_password_bar_with_segments(axes[0], password, segments_8b, title_8b, 'red', 'black')
@@ -87,7 +89,8 @@ def visualize_single_password(password: str, segments_8b: list, segments_08b: li
     plt.close()
 
 
-def draw_histogram(jac_distance: list, save_path: str = 'stastic/second_time/jaccard_histogram.png'):
+def draw_histogram(jac_distance: list, save_path: str = 'stastic/second_time/jaccard_histogram.png',
+                   first_model_name: str = 'First Model', second_model_name: str = 'Second Model'):
     """繪製 Jaccard Distance 分佈直方圖"""
     plt.figure(figsize=(10, 5))
     plt.hist(jac_distance, bins=20, edgecolor='black', alpha=0.7, color='steelblue')
@@ -97,7 +100,7 @@ def draw_histogram(jac_distance: list, save_path: str = 'stastic/second_time/jac
                 label=f'Median: {np.median(jac_distance):.3f}')
     plt.xlabel('Jaccard Distance')
     plt.ylabel('Count')
-    plt.title('Distribution of Jaccard Distance (8B vs 0.8B)')
+    plt.title(f'Distribution of Jaccard Distance ({first_model_name} vs {second_model_name})')
     plt.legend()
     plt.tight_layout()
     plt.savefig(save_path, dpi=150)
@@ -105,7 +108,8 @@ def draw_histogram(jac_distance: list, save_path: str = 'stastic/second_time/jac
     print(f"已儲存: {save_path}")
 
 
-def draw_heatmap(jac_distance: list, save_path: str = 'stastic/second_time/jaccard_heatmap.png'):
+def draw_heatmap(jac_distance: list, save_path: str = 'stastic/second_time/jaccard_heatmap.png',
+                 first_model_name: str = 'First Model', second_model_name: str = 'Second Model'):
     """繪製 Jaccard Distance 熱力圖"""
     n = len(jac_distance)
     side = int(np.ceil(np.sqrt(n)))
@@ -121,7 +125,7 @@ def draw_heatmap(jac_distance: list, save_path: str = 'stastic/second_time/jacca
                 vmin=0, vmax=1,
                 cbar_kws={'label': 'Jaccard Distance'},
                 yticklabels=list(range(side-1, -1, -1)))  # y 軸標籤: 9,8,7...0
-    plt.title('Jaccard Distance Heatmap (8B vs 0.8B)')
+    plt.title(f'Jaccard Distance Heatmap ({first_model_name} vs {second_model_name})')
     plt.xlabel('Password Index (column)')
     plt.ylabel('Password Index (row)')
     plt.tight_layout()
@@ -153,7 +157,9 @@ def draw_sorted_bar(password: list, jac_distance: list,
 def draw_all_different_passwords(diff_list: list, data_bigger_b: list, data_smaller_b: list,
                                   cut_position_func, caculate_jaccard_distance_func,
                                   cut_position_with_tags_func,
-                                  output_dir: str = 'stastic/second_time/single_passwords'):
+                                  output_dir: str = 'stastic/second_time/single_passwords',
+                                  first_model_name: str = 'First Model',
+                                  second_model_name: str = 'Second Model'):
     """產生所有有差異的單個密碼切割圖"""
     os.makedirs(output_dir, exist_ok=True)
     
@@ -168,6 +174,8 @@ def draw_all_different_passwords(diff_list: list, data_bigger_b: list, data_smal
             cut_position_func,
             caculate_jaccard_distance_func,
             cut_position_with_tags_func,
-            save_path=f'{output_dir}/{i:03d}_{safe_pw}.png'
+            save_path=f'{output_dir}/{i:03d}_{safe_pw}.png',
+            first_model_name=first_model_name,
+            second_model_name=second_model_name,
         )
     print(f"總共儲存 {len(diff_list)} 個有差異的密碼視覺化圖到 {output_dir}/")

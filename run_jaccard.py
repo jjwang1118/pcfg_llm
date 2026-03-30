@@ -85,8 +85,8 @@ if __name__ == "__main__":
     )
 
     # 6. 繪圖
-    draw_result.draw_histogram(jac_distance, OUT["histogram"])
-    draw_result.draw_heatmap(jac_distance, OUT["heatmap"])
+    draw_result.draw_histogram(jac_distance, OUT["histogram"], first_model, second_model)
+    draw_result.draw_heatmap(jac_distance, OUT["heatmap"], first_model, second_model)
     draw_result.draw_sorted_bar(password, jac_distance, OUT["sorted_bar"])
 
     # 7. 統計摘要
@@ -157,4 +157,6 @@ if __name__ == "__main__":
         diff_list, data_first, data_second,
         cut_position, calculate_jaccard_distance, cut_position_with_tags,
         OUT["single_passwords_dir"],
+        first_model_name=first_model,
+        second_model_name=second_model,
     )
