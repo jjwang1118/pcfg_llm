@@ -67,6 +67,7 @@ if __name__ == "__main__":
     # 3. 載入資料集並清洗
     passwords = load_passwords(paths["data"]["datasets"], paths["data"]["max_passwords"])
     passwords = clean(passwords, batch_flag=True)
+    passwords = passwords[:paths["data"]["analysis_sample"]]
 
     # 4. 取得推論參數
     max_new_tokens = paths["model"]["max_new_tokens"]
