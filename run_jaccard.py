@@ -10,9 +10,13 @@ from src.jaccard import (
 from src import draw_result
 
 
-def build_jaccard_paths(first_file: str, second_file: str, statistics_dir: str) -> dict:
+def build_jaccard_paths(first_file: str, second_file: str, statistics_dir: str,
+                        first_model: str, first_exp: int,
+                        second_model: str, second_exp: int) -> dict:
     """建構 Jaccard 比較所需的輸入/輸出路徑"""
-    jaccard_dir = os.path.join(statistics_dir, "jaccard")
+    comparison_name = f"{first_model}_vs_{second_model}"
+    exp_name = f"exp_{first_exp}_vs_exp_{second_exp}"
+    jaccard_dir = os.path.join(statistics_dir, "jaccard", comparison_name, exp_name)
     return {
         "input": {
             "first_result": first_file,
@@ -54,7 +58,9 @@ if __name__ == "__main__":
 
     paths = build_jaccard_paths(
         first_file, second_file,
-        statistics_dir=base_paths["statistics"]["dir"],
+        statistics_dir=config["output"]["statistics_dir"],
+        first_model=first_model, first_exp=first_exp,
+        second_model=second_model, second_exp=second_exp,
     )
     OUT = paths["output"]
 
