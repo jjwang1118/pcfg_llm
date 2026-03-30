@@ -164,5 +164,11 @@ def analyze_password_batch(passwords: list, model, tokenizer, prompt_text: str,
         else:
             break
 
-    # fallback：回傳整批為 parse_error
-    return [{"password": p, "parse_error": True, "raw_output": stripped} for p in passwords]
+    # fallback：回傳整批為 parse_error，raw_output 只存一份在第一筆
+    results = []
+    for idx, p in enumerate(passwords):
+        item = {"password": p, "parse_error": True, "batch_failed": True}
+        if idx == 0:
+            item["raw_output"] = stripped
+        results.append(item)
+    return results
