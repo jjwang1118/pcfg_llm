@@ -34,11 +34,23 @@ if __name__ == "__main__":
     config = load_config()
     base_paths = build_paths(config)
 
-    # 2. 指定要比較的兩個結果檔案
-    first_file = base_paths["output"]["pw_seg"]
-    second_file = first_file  # TODO: 替換為第二個模型的輸出路徑
-    first_name = config["active_model"]
-    second_name = "other_model"  # TODO: 替換
+    # 2. 從 config.yaml 的 jaccard 區塊取得比較設定
+    jaccard_cfg = config.get("jaccard", {})
+    gen_dir = config["output"]["gen_dir"]
+
+    first_model = jaccard_cfg.get("first_model", config["active_model"])
+    first_exp = jaccard_cfg.get("first_exp", config["output"]["experiment_number"])
+    second_model = jaccard_cfg.get("second_model", first_model)
+    second_exp = jaccard_cfg.get("second_exp", first_exp)
+
+    first_file = os.path.join(gen_dir, first_model, f"exp_{first_exp}.jsonl")
+    second_file = os.path.join(gen_dir, second_model, f"exp_{second_exp}.jsonl")
+    first_name = first_model
+    second_name = second_model
+
+    print(f"比較對象:")
+    print(f"  第一個: {first_file}")
+    print(f"  第二個: {second_file}")
 
     paths = build_jaccard_paths(
         first_file, second_file,

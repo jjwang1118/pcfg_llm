@@ -1,5 +1,5 @@
 # 當前使用的模型名稱（須對應 model/ 下的資料夾名稱）
-active_model: "Llama-3.1-8B-Instruct"
+active_model: "Qwen3-8B"
 
 # 模型參數（所有模型共用的預設參數，可在 model_overrides 中覆寫）
 model_defaults:
@@ -28,7 +28,7 @@ data:
     max_passwords: 1000000
     analysis_sample: 100
     batch_size: 10
-    batch: false  # true=批次推論(batch_size筆/次), false=逐筆推論
+    batch: true  # true=批次推論(batch_size筆/次), false=逐筆推論
 
 # Prompt 設定
 prompt:
@@ -41,3 +41,10 @@ output:
   gen_dir: "gen"
   experiment_number: 1 # 實驗編號
   statistics_dir: "statistics" # 統計輸出目錄
+
+# Jaccard 比較設定
+jaccard:
+  first_model: "Qwen3-8B"                  # 第一個模型名稱
+  first_exp: 1                              # 第一個實驗編號
+  second_model: "Llama-3.1-8B-Instruct"    # 第二個模型名稱
+  second_exp: 1                             # 第二個實驗編號
