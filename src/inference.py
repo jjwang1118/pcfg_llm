@@ -33,10 +33,17 @@ def clean_json_output(content: str) -> str:
     except json.JSONDecodeError:
         pass
 
-    # fallback：用 regex 抽取第一個完整的 JSON 物件 { ... }
-    match = re.search(r'\{.*\}', content, re.DOTALL)
-    if match:
-        return match.group(0).strip()
+    # fallback：用括號平衡掃描抽取第一個完整的 JSON 物件 { ... }
+    start = content.find('{')
+    if start != -1:
+        depth = 0
+        for i, c in enumerate(content[start:], start):
+            if c == '{':
+                depth += 1
+            elif c == '}':
+                depth -= 1
+            if depth == 0:
+                return content[start:i + 1].strip()
 
     return content
 
