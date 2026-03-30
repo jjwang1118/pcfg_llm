@@ -6,14 +6,18 @@ dist/
 build/
 
 # Model weights (too large for git)
-model/
+model/*
+!model/.gitkeep
 
 # Data files
-data/
+data/*
+!data/.gitkeep
 
 # Generated outputs
-gen/
-statistics/
+gen/*
+!gen/.gitkeep
+statistics/*
+!statistics/.gitkeep
 record.csv
 
 # IDE
