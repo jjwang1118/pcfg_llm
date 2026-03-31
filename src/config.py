@@ -64,8 +64,6 @@ def build_paths(config: dict) -> dict:
         "datasets": [os.path.join(input_dir, ds) for ds in datasets_cfg],
         "max_passwords": config["data"]["processing"]["max_passwords"],
         "analysis_sample": config["data"]["processing"]["analysis_sample"],
-        "batch_size": config["data"]["processing"]["batch_size"],
-        "batch": config["data"]["processing"].get("batch", False),
     }
 
     # --- Prompt ---

@@ -6,9 +6,15 @@ def read_jsonl(file_path: str) -> list:
     results = []
     with open(file_path, 'r', encoding='utf-8') as f:
         for line in f:
-            if line.strip():
+            if not line.strip():
+                continue
+            try:
                 data = json.loads(line)
-                results.append((data['password'], data['segments']))
+            except json.JSONDecodeError:
+                continue
+            if not isinstance(data, dict) or 'password' not in data or 'segments' not in data:
+                continue
+            results.append((data['password'], data['segments']))
     return results
 
 
