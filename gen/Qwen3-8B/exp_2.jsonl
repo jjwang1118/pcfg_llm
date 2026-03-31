@@ -1,0 +1,100 @@
+{"password": "123456789", "segments": [{"text": "123456789", "tag": "NUMBER"}]}
+{"password": "password", "segments": [{"text": "password", "tag": "X", "suggested_tag": "ENGLISH_NOUN", "explanation": "Common English noun that may be used as a password due to its generic nature"}]}
+{"password": "iloveyou", "segments": [{"text": "i", "tag": "ENGLISH_PRON"}, {"text": "love", "tag": "ENGLISH_VERB"}, {"text": "you", "tag": "ENGLISH_PRON"}]}
+{"password": "princess", "segments": [{"text": "princess", "tag": "ENGLISH_NOUN"}]}
+{"password": "12345678", "segments": [{"text": "12345678", "tag": "NUMBER"}]}
+{"password": "babygirl", "segments": [{"text": "baby", "tag": "ENGLISH_NOUN"}, {"text": "girl", "tag": "ENGLISH_NOUN"}]}
+{"password": "michelle", "segments": [{"text": "michelle", "tag": "MALE_NAME", "suggested_tag": "FEMALE_NAME", "explanation": "The name Michelle is typically associated with female names"}]}
+{"password": "sunshine", "segments": [{"text": "sunshine", "tag": "ENGLISH_NOUN"}]}
+{"password": "chocolate", "segments": [{"text": "chocolate", "tag": "ENGLISH_NOUN"}]}
+{"password": "password1", "segments": [{"text": "password", "tag": "X", "suggested_tag": "ENGLISH_VERB", "explanation": "The word 'password' is commonly used as a verb in computing contexts"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "butterfly", "segments": [{"text": "butterfly", "tag": "ENGLISH_NOUN"}]}
+{"password": "liverpool", "segments": [{"text": "liverpool", "tag": "X", "suggested_tag": "ENGLISH_NOUN", "explanation": "Common English noun referring to a city or football club"}]}
+{"password": "football", "segments": [{"text": "football", "tag": "ENGLISH_NOUN"}]}
+{"password": "jennifer", "segments": [{"text": "jennifer", "tag": "MALE_NAME"}]}
+{"password": "1234567890", "segments": [{"text": "1234567890", "tag": "NUMBER"}]}
+{"password": "superman", "segments": [{"text": "superman", "tag": "X", "suggested_tag": "ENGLISH_PROPER_NOUN", "explanation": "Common English proper noun referring to a superhero"}]}
+{"password": "basketball", "segments": [{"text": "basketball", "tag": "ENGLISH_NOUN"}]}
+{"password": "elizabeth", "segments": [{"text": "elizabeth", "tag": "MALE_NAME", "suggested_tag": "ENGLISH_PROPER_NOUN", "explanation": "The name Elizabeth is typically considered a female name, but it may be tagged under male names due to potential variations or usage in specific contexts."}]}
+{"password": "tinkerbell", "segments": [{"text": "tinkerbell", "tag": "X", "suggested_tag": "ENGLISH_NOUN", "explanation": "The word 'tinkerbell' is a proper noun referring to a mythical creature and may be used as a name in passwords"}]}
+{"password": "samantha", "segments": [{"text": "samantha", "tag": "MALE_NAME"}]}
+{"password": "danielle", "segments": [{"text": "danielle", "tag": "MALE_NAME", "suggested_tag": "FEMALE_NAME", "explanation": "The name 'danielle' is commonly associated with female names"}]}
+{"password": "jonathan", "segments": [{"text": "jonathan", "tag": "MALE_NAME"}]}
+{"password": "987654321", "segments": [{"text": "987654321", "tag": "NUMBER"}]}
+{"password": "computer", "segments": [{"text": "computer", "tag": "ENGLISH_NOUN"}]}
+{"password": "whatever", "segments": [{"text": "whatever", "tag": "ENGLISH_ADV"}]}
+{"password": "spongebob", "segments": [{"text": "spongebob", "tag": "X", "suggested_tag": "AMERICAN_ANIME_CHARACTER", "explanation": "Commonly known American anime character name"}]}
+{"password": "softball", "segments": [{"text": "softball", "tag": "X", "suggested_tag": "SPORT_NAME", "explanation": "Common sport name"}]}
+{"password": "princesa", "segments": [{"text": "princesa", "tag": "X", "suggested_tag": "SPANISH_NOUN", "explanation": "Spanish word for 'princess'"}]}
+{"password": "alexa", "segments": [{"text": "alexa", "tag": "X", "suggested_tag": "ENGLISH_PROPER_NOUN", "explanation": "Possibly a proper noun or a name"}]}
+{"password": "estrella", "segments": [{"text": "estrella", "tag": "X", "suggested_tag": "SPANISH_NOUN", "explanation": "The word 'estrella' is a Spanish noun meaning 'star'"}]}
+{"password": "beautiful", "segments": [{"text": "beautiful", "tag": "ENGLISH_ADJ"}]}
+{"password": "poohbear", "segments": [{"text": "pooh", "tag": "X", "suggested_tag": "ANIMAL_NAME", "explanation": "Common animal name associated with Winnie the Pooh"}, {"text": "bear", "tag": "X", "suggested_tag": "ANIMAL_NAME", "explanation": "Common animal name"}]}
+{"password": "alexander", "segments": [{"text": "alexander", "tag": "MALE_NAME"}]}
+{"password": "christian", "segments": [{"text": "christian", "tag": "MALE_NAME"}]}
+{"password": "princess1", "segments": [{"text": "princess", "tag": "ENGLISH_NOUN"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "carolina", "segments": [{"text": "carolina", "tag": "MALE_NAME", "suggested_tag": "SPANISH_FEMALE_NAME", "explanation": "Carolina is commonly recognized as a Spanish female name"}]}
+{"password": "alejandro", "segments": [{"text": "alejandro", "tag": "MALE_NAME"}]}
+{"password": "brittany", "segments": [{"text": "brittany", "tag": "MALE_NAME"}]}
+{"password": "alejandra", "segments": [{"text": "alejandra", "tag": "X", "suggested_tag": "SPANISH_NAME", "explanation": "Appears to be a Spanish name"}]}
+{"password": "patricia", "segments": [{"text": "patricia", "tag": "MALE_NAME"}]}
+{"password": "tequiero", "segments": [{"text": "te", "tag": "SPANISH_PRON"}, {"text": "quiero", "tag": "SPANISH_VERB"}]}
+{"password": "stephanie", "segments": [{"text": "stephanie", "tag": "MALE_NAME", "suggested_tag": "FEMALE_NAME", "explanation": "The name Stephanie is typically associated with female names"}]}
+{"password": "blink182", "segments": [{"text": "blink", "tag": "X", "suggested_tag": "ENGLISH_NOUN", "explanation": "Could represent a noun such as the band Blink-182"}, {"text": "182", "tag": "NUMBER"}]}
+{"password": "victoria", "segments": [{"text": "victoria", "tag": "MALE_NAME"}]}
+{"password": "fernando", "segments": [{"text": "fernando", "tag": "MALE_NAME"}]}
+{"password": "cristina", "segments": [{"text": "cristina", "tag": "MALE_NAME"}]}
+{"password": "babygurl", "segments": [{"text": "baby", "tag": "ENGLISH_NOUN"}, {"text": "gurl", "tag": "X", "suggested_tag": "SLANG_TERM", "explanation": "Slang term for girl"}]}
+{"password": "baseball", "segments": [{"text": "baseball", "tag": "ENGLISH_NOUN"}]}
+{"password": "greenday", "segments": [{"text": "green", "tag": "ENGLISH_ADJ"}, {"text": "day", "tag": "ENGLISH_NOUN"}]}
+{"password": "november", "segments": [{"text": "november", "tag": "MONTH"}]}
+{"password": "mahalkita", "segments": [{"text": "mahalkita", "tag": "X", "suggested_tag": "INDONESIAN_WORD", "explanation": "The word appears to be an Indonesian word or name"}]}
+{"password": "september", "segments": [{"text": "september", "tag": "ENGLISH_ADJ"}]}
+{"password": "december", "segments": [{"text": "december", "tag": "MONTH"}]}
+{"password": "mariposa", "segments": [{"text": "mariposa", "tag": "X", "suggested_tag": "SPANISH_NOUN", "explanation": "The word 'mariposa' is Spanish for 'butterfly' and functions as a noun"}]}
+{"password": "gabriela", "segments": [{"text": "gabriela", "tag": "MALE_NAME", "suggested_tag": "FEMALE_NAME", "explanation": "The name 'gabriela' is commonly associated with female names"}]}
+{"password": "iloveyou2", "segments": [{"text": "i", "tag": "ENGLISH_PRON"}, {"text": "love", "tag": "ENGLISH_VERB"}, {"text": "you", "tag": "ENGLISH_PRON"}, {"text": "2", "tag": "NUMBER"}]}
+{"password": "kimberly", "segments": [{"text": "kimberly", "tag": "MALE_NAME"}]}
+{"password": "pictures", "segments": [{"text": "pictures", "tag": "ENGLISH_NOUN"}]}
+{"password": "hellokitty", "segments": [{"text": "hello", "tag": "ENGLISH_ADJ"}, {"text": "kitty", "tag": "ENGLISH_NOUN"}]}
+{"password": "babygirl1", "segments": [{"text": "babygirl", "tag": "X", "suggested_tag": "ENGLISH_NOUN", "explanation": "Possibly a compound noun referring to a young female child"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "angelica", "segments": [{"text": "angelica", "tag": "X", "suggested_tag": "FEMALE_NAME", "explanation": "Common female name in multiple languages"}]}
+{"password": "courtney", "segments": [{"text": "courtney", "tag": "MALE_NAME"}]}
+{"password": "iloveyou1", "segments": [{"text": "i", "tag": "ENGLISH_PRON"}, {"text": "love", "tag": "ENGLISH_VERB"}, {"text": "you", "tag": "ENGLISH_PRON"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "precious", "segments": [{"text": "precious", "tag": "ENGLISH_ADJ"}]}
+{"password": "inuyasha", "segments": [{"text": "inuyasha", "tag": "X", "suggested_tag": "JAPANESE_ANIME_CHARACTER", "explanation": "Recognized as a Japanese anime character name"}]}
+{"password": "veronica", "segments": [{"text": "veronica", "tag": "MALE_NAME"}]}
+{"password": "sebastian", "segments": [{"text": "sebastian", "tag": "MALE_NAME"}]}
+{"password": "spiderman", "segments": [{"text": "spiderman", "tag": "X", "suggested_tag": "ENGLISH_PROPER_NOUN", "explanation": "Proper noun referring to a fictional superhero character"}]}
+{"password": "christopher", "segments": [{"text": "christopher", "tag": "X", "suggested_tag": "ENGLISH_NAME", "explanation": "Appears to be an English male name"}]}
+{"password": "0123456789", "segments": [{"text": "0123456789", "tag": "NUMBER"}]}
+{"password": "barcelona", "segments": [{"text": "barcelona", "tag": "X", "suggested_tag": "SPANISH_CITY", "explanation": "Known as a city in Spain, commonly associated with Spanish language and culture"}]}
+{"password": "slipknot", "segments": [{"text": "slipknot", "tag": "X", "suggested_tag": "BAND_NAME", "explanation": "Known as the name of a heavy metal band"}]}
+{"password": "cutiepie", "segments": [{"text": "cutie", "tag": "X", "suggested_tag": "ENG_ADJ", "explanation": "Appears to be an adjective"}, {"text": "pie", "tag": "X", "suggested_tag": "ENG_NOUN", "explanation": "Appears to be a noun"}]}
+{"password": "789456123", "segments": [{"text": "789456123", "tag": "NUMBER"}]}
+{"password": "portugal", "segments": [{"text": "portugal", "tag": "X", "suggested_tag": "LOCATION", "explanation": "Portugal is an English place name"}]}
+{"password": "volleyball", "segments": [{"text": "volleyball", "tag": "ENGLISH_NOUN"}]}
+{"password": "rockstar", "segments": [{"text": "rockstar", "tag": "X", "suggested_tag": "ENGLISH_NOUN", "explanation": "The term 'rockstar' is commonly used as a noun in English"}]}
+{"password": "nicholas", "segments": [{"text": "nicholas", "tag": "MALE_NAME"}]}
+{"password": "cristian", "segments": [{"text": "cristian", "tag": "MALE_NAME"}]}
+{"password": "chrisbrown", "segments": [{"text": "chris", "tag": "MALE_NAME"}, {"text": "brown", "tag": "MALE_NAME"}]}
+{"password": "internet", "segments": [{"text": "internet", "tag": "ENGLISH_NOUN"}]}
+{"password": "strawberry", "segments": [{"text": "strawberry", "tag": "ENGLISH_NOUN"}]}
+{"password": "garfield", "segments": [{"text": "garfield", "tag": "X", "suggested_tag": "ANIMAL_NAME", "explanation": "Common cartoon animal name"}]}
+{"password": "lollipop", "segments": [{"text": "lollipop", "tag": "X", "suggested_tag": "ENGLISH_NOUN", "explanation": "Common English noun referring to a sweet candy"}]}
+{"password": "qwertyuiop", "segments": [{"text": "qwertyuiop", "tag": "KB"}]}
+{"raw_output": "{\"password\": \"superstar\", \"segments\": [{\"text\": \"superstar\", \"tag\": \"X\", \"suggested_tag\": \"NOUN_COMPOUND\", \"explanation\": \"Compound noun formed by combining 'super' and 'star'}]}", "parse_error": true}
+{"password": "harrypotter", "segments": [{"text": "harry", "tag": "MALE_NAME"}, {"text": "potter", "tag": "X", "suggested_tag": "ENGLISH_PROPER_NOUN", "explanation": "Common English proper noun, likely a surname"}]}
+{"password": "ihateyou", "segments": [{"text": "i", "tag": "ENGLISH_PRON"}, {"text": "hate", "tag": "ENGLISH_VERB"}, {"text": "you", "tag": "ENGLISH_PRON"}]}
+{"password": "midnight", "segments": [{"text": "midnight", "tag": "ENGLISH_NOUN"}]}
+{"password": "christine", "segments": [{"text": "christine", "tag": "MALE_NAME"}]}
+{"password": "jordan23", "segments": [{"text": "jordan", "tag": "MALE_NAME"}, {"text": "23", "tag": "NUMBER"}]}
+{"password": "mercedes", "segments": [{"text": "mercedes", "tag": "MALE_NAME", "suggested_tag": "GERMAN_NAME", "explanation": "Mercedes is a common German male name"}]}
+{"password": "katherine", "segments": [{"text": "katherine", "tag": "MALE_NAME", "suggested_tag": "FEMALE_NAME", "explanation": "The name Katherine is typically considered a female name"}]}
+{"password": "icecream", "segments": [{"text": "ice", "tag": "ENGLISH_NOUN"}, {"text": "cream", "tag": "ENGLISH_NOUN"}]}
+{"password": "johncena", "segments": [{"text": "johncena", "tag": "MALE_NAME", "suggested_tag": "AMERICAN_FOOTBALLER_NAME", "explanation": "Common male name associated with American football player John Cena"}]}
+{"password": "lovelove", "segments": [{"text": "love", "tag": "ENGLISH_VERB"}, {"text": "love", "tag": "ENGLISH_VERB"}]}
+{"password": "benjamin", "segments": [{"text": "benjamin", "tag": "MALE_NAME"}]}
+{"password": "metallica", "segments": [{"text": "metallica", "tag": "X", "suggested_tag": "ENGLISH_PROPER_NOUN", "explanation": "The term 'metallica' refers to the band Metallica, which is a proper noun"}]}
+{"password": "myspace1", "segments": [{"text": "my", "tag": "X", "suggested_tag": "PREFIX_PATTERN", "explanation": "Common prefix in passwords"}, {"text": "space", "tag": "ENGLISH_NOUN"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "babyblue", "segments": [{"text": "baby", "tag": "ENGLISH_NOUN"}, {"text": "blue", "tag": "ENGLISH_ADJ"}]}

@@ -1,0 +1,100 @@
+{"password": "123456789", "segments": [{"text": "123", "tag": "NUMBER"}, {"text": "456", "tag": "NUMBER"}, {"text": "789", "tag": "NUMBER"}]}
+{"password": "password", "segments": [{"text": "pass", "tag": "X", "suggested_tag": "SUBJECT", "explanation": "A common word used in many contexts"}, {"text": "word", "tag": "english_NOUN"}, {"text": "port", "tag": "X", "suggested_tag": "LOCATION", "explanation": "Could be referring to a city, river, etc."}, {"text": "alphanumeric", "tag": "X", "suggested_tag": "ADJECTIVE", "explanation": "Indicates presence of letters and numbers in the password"}, {"text": "!", "tag": "SPEC"}]}
+{"password": "iloveyou", "segments": [{"text": "i", "tag": "english_PRON"}, {"text": "love", "tag": "english_VERB"}, {"text": "you", "tag": "english_PRON"}]}
+{"password": "princess", "segments": [{"text": "prince", "tag": "X", "suggested_tag": "MALE_TITLE", "explanation": "Common title or honorific"}, {"text": "ss", "tag": "X", "suggested_tag": "REPEATED_CHARACTERS", "explanation": "Repeated characters often found in weak passwords"}, {"text": "ess", "tag": "X", "suggested_tag": "SUFFIX_PATTERN", "explanation": "Common 4-letter suffix pattern"}, {"text": "", "tag": "SPEC"}]}
+{"password": "12345678", "segments": [{"text": "12345678", "tag": "NUMBER"}]}
+{"password": "babygirl", "segments": [{"text": "baby", "tag": "english_NOUN"}, {"text": "girl", "tag": "french_PRON"}]}
+{"password": "michelle", "segments": [{"text": "michelle", "tag": "FEMALE_NAME"}]}
+{"password": "sunshine", "segments": [{"text": "sun", "tag": "X", "suggested_tag": "DAY_OF_WEEK", "explanation": "Common day of the week"}, {"text": "shine", "tag": "english_VERB"}, {"text": "ine", "tag": "english_SUF"}]}
+{"password": "chocolate", "segments": [{"text": "choc", "tag": "X", "suggested_tag": "SUFFIX_PATTERN", "explanation": "Common English word suffix"}, {"text": "olate", "tag": "X", "suggested_tag": "PREFIX_PATTERN", "explanation": "Common English word prefix"}, {"text": "e", "tag": "english_PRON"}, {"text": "t", "tag": "english_PRON"}, {"text": "le", "tag": "english_PRON"}]}
+{"password": "password1", "segments": [{"text": "pass", "tag": "english_NOUN"}, {"text": "word", "tag": "english_NOUN"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "butterfly", "segments": [{"text": "but", "tag": "english_PRON"}, {"text": "ter", "tag": "english_PRON"}, {"text": "fly", "tag": "english_VERB"}, {"text": "y", "tag": "english_PRT"}]}
+{"password": "liverpool", "segments": [{"text": "liv", "tag": "X", "suggested_tag": "PREFIX_PATTERN", "explanation": "Common prefix pattern in many English words"}, {"text": "er", "tag": "english_PRON", "suggested_tag": null, "explanation": null}, {"text": "pool", "tag": "LOCATION", "suggested_tag": null, "explanation": null}]}
+{"password": "football", "segments": [{"text": "foot", "tag": "english_NOUN"}, {"text": "ball", "tag": "english_NOUN"}]}
+{"password": "jennifer", "segments": [{"text": "jen", "tag": "X", "suggested_tag": "ENGLISH_SHORT_FORM", "explanation": "Shortened form of Jennifer"}, {"text": "nife", "tag": "X", "suggested_tag": "UNKNOWN", "explanation": "Unrecognized pattern"}, {"text": "r", "tag": "X", "suggested_tag": "CONSONANT", "explanation": "Consonant sequence"}, {"text": "en", "tag": "X", "suggested_tag": "UNKNOWN", "explanation": "Unrecognized pattern"}, {"text": "er", "tag": "X", "suggested_tag": "UNKNOWN", "explanation": "Unrecognized pattern"}]}
+{"password": "1234567890", "segments": [{"text": "123456", "tag": "KB"}, {"text": "7890", "tag": "NUMBER"}]}
+{"password": "superman", "segments": [{"text": "super", "tag": "ENGLISH_ADJ"}, {"text": "man", "tag": "ENGLISH_NOUN"}]}
+{"password": "basketball", "segments": [{"text": "basket", "tag": "english_NOUN"}, {"text": "ball", "tag": "english_NOUN"}]}
+{"password": "elizabeth", "segments": [{"text": "elizabeth", "tag": "french_NOUN"}]}
+{"password": "tinkerbell", "segments": [{"text": "tinker", "tag": "english_NOUN"}, {"text": "bell", "tag": "english_NOUN"}]}
+{"password": "samantha", "segments": [{"text": "samantha", "tag": "french_NOUN"}]}
+{"password": "danielle", "segments": [{"text": "dani", "tag": "X", "suggested_tag": "FRENCH_PREFIX", "explanation": "French diminutive prefix"}, {"text": "elle", "tag": "FEMALE_NAME"}]}
+{"password": "jonathan", "segments": [{"text": "jona", "tag": "X", "suggested_tag": "HEBREW_PREFIX", "explanation": "Hebrew prefix pattern"}, {"text": "than", "tag": "english_NOUN"}]}
+{"password": "987654321", "segments": [{"text": "987654321", "tag": "NUMBER"}]}
+{"password": "computer", "segments": [{"text": "com", "tag": "PRE"}, {"text": "puter", "tag": "NOUN"}, {"text": "", "tag": "SPEC"}]}
+{"password": "whatever", "segments": [{"text": "what", "tag": "english_ADJ"}, {"text": "ever", "tag": "english_ADJ"}, {"text": "the", "tag": "english_DET"}, {"text": "r", "tag": "english_CONJ"}, {"text": "ver", "tag": "X", "suggested_tag": "VERB_ROOT", "explanation": "Base form of verb'verify'"}, {"text": "!", "tag": "SPEC"}]}
+{"password": "spongebob", "segments": [{"text": "sponge", "tag": "X", "suggested_tag": "UNKNOWN_WORD", "explanation": "Unrecognized word"}, {"text": "bob", "tag": "MALE_NAME"}]}
+{"password": "softball", "segments": [{"text": "soft", "tag": "english_ADJ"}, {"text": "ball", "tag": "english_NOUN"}]}
+{"password": "princesa", "segments": [{"text": "prince", "tag": "ENGLISH_NOUN"}, {"text": "sa", "tag": "X", "suggested_tag": "SPANISH_SUFFixed_WORD", "explanation": "Common Spanish suffixed word pattern"}, {"text": "a", "tag": "ENGLISH_DET"}]}
+{"password": "alexandra", "segments": [{"text": "alexan", "tag": "X", "suggested_tag": "GREEK_GIVEN_NAME", "explanation": "Possible Greek given name prefix"}, {"text": "dra", "tag": "X", "suggested_tag": "GREEK_SURNAMES", "explanation": "Greek surname pattern"}, {"text": "!", "tag": "SPEC"}]}
+{"password": "estrella", "segments": [{"text": "estrella", "tag": "french_NOUN"}]}
+{"password": "beautiful", "segments": [{"text": "beau", "tag": "X", "suggested_tag": "ADJECTIVE_PREFIX", "explanation": "Common prefix in adjectives"}, {"text": "tiful", "tag": "X", "suggested_tag": "ADJECTIVE_SUFFIX", "explanation": "Common suffix in adjectives"}, {"text": "", "tag": "X", "suggested_tag": "VOWEL", "explanation": "Vowel sequence common in many words"}]}
+{"password": "poohbear", "segments": [{"text": "pooh", "tag": "X", "suggested_tag": "DISNEY_CHARACTERS", "explanation": "Refers to Winnie the Pooh"}, {"text": "bear", "tag": "X", "suggested_tag": "ANIMAL_NAME", "explanation": "Common animal name"}]}
+{"password": "alexander", "segments": [{"text": "alexander", "tag": "X", "suggested_tag": "MALE_NAME", "explanation": "appears to be a male name"}]}
+{"password": "christian", "segments": [{"text": "christian", "tag": "MALE_NAME"}]}
+{"password": "princess1", "segments": [{"text": "princess", "tag": "french_NOUN"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "carolina", "segments": [{"text": "caro", "tag": "X", "suggested_tag": "SPANISH_NAME", "explanation": "Possible Spanish female given name prefix"}, {"text": "lina", "tag": "X", "suggested_tag": "SPANISH_NAME", "explanation": "Possible Spanish female given name suffix"}, {"text": "a", "tag": "english_DET"}]}
+{"password": "alejandro", "segments": [{"text": "alejandro", "tag": "X", "suggested_tag": "SPANISH_MALE_NAME", "explanation": "Spanish male given name"}]}
+{"password": "brittany", "segments": [{"text": "brittany", "tag": "FEMALE_NAME"}]}
+{"password": "alejandra", "segments": [{"text": "alejandra", "tag": "french_NOUN"}, {"text": "", "tag": "X", "suggested_tag": "SPANISH_FEMALE_NAME", "explanation": "Spanish female name"}]}
+{"password": "patricia", "segments": [{"text": "patri", "tag": "X", "suggested_tag": "LATIN_ROOT_WORD", "explanation": "Latin root word"}, {"text": "cia", "tag": "X", "suggested_tag": "LATIN_SUFFFIX", "explanation": "Common Latin suffix pattern"}, {"text": "ia", "tag": "french_NOUN", "suggested_tag": null, "explanation": null}]}
+{"password": "tequiero", "segments": [{"text": "te", "tag": "X", "suggested_tag": "SPANISH_PREFIX", "explanation": "Spanish prefix pattern"}, {"text": "quier", "tag": "X", "suggested_tag": "SPANISH_VERB", "explanation": "Spanish verb pattern"}, {"text": "ero", "tag": "X", "suggested_tag": "SPANISH_SUFFIX", "explanation": "Spanish suffix pattern"}]}
+{"password": "stephanie", "segments": [{"text": "stephanie", "tag": "french_NOUN"}]}
+{"password": "blink182", "segments": [{"text": "blink", "tag": "X", "suggested_tag": "BAND_NAME", "explanation": "Reference to Blink-182 band"}, {"text": "182", "tag": "DATE_6DIGIT", "suggested_tag": null, "explanation": null}]}
+{"password": "victoria", "segments": [{"text": "vic", "tag": "X", "suggested_tag": "LATIN_WORD", "explanation": "Latin prefix"}, {"text": "ria", "tag": "english_NOUN"}]}
+{"password": "fernando", "segments": [{"text": "ferna", "tag": "X", "suggested_tag": "SPANISH_LAST_NAME", "explanation": "Common Spanish last name prefix"}, {"text": "ndo", "tag": "X", "suggested_tag": "SPANISH_LAST_NAME", "explanation": "Common Spanish last name suffix"}, {"text": "o", "tag": "X", "suggested_tag": "Pronoun", "explanation": "Shortened form of pronouns in some contexts"}]}
+{"password": "cristina", "segments": [{"text": "cris", "tag": "X", "suggested_tag": "ITALIAN_GIVEN_NAME", "explanation": "Common Italian given name"}, {"text": "tina", "tag": "X", "suggested_tag": "ITALIAN_SURNAME", "explanation": "Common Italian surname"}]}
+{"password": "babygurl", "segments": [{"text": "baby", "tag": "english_NOUN"}, {"text": "gurl", "tag": "X", "suggested_tag": "SLANG", "explanation": "Urban Dictionary Entity (slang)"}, {"text": "", "tag": ""}]}
+{"password": "baseball", "segments": [{"text": "base", "tag": "english_X", "suggested_tag": "BASEBALL_TEAM", "explanation": "Name of a professional baseball team"}, {"text": "ball", "tag": "english_NOUN"}, {"text": "l", "tag": "english_DET"}, {"text": "l", "tag": "english_DET"}, {"text": "l", "tag": "english_DET"}, {"text": "y", "tag": "english_X", "suggested_tag": "NULL", "explanation": "Typo or variation in spelling"}]}
+{"password": "greenday", "segments": [{"text": "green", "tag": "english_ADJ"}, {"text": "day", "tag": "english_NOUN"}]}
+{"password": "november", "segments": [{"text": "november", "tag": "MONTH"}]}
+{"password": "mahalkita", "segments": [{"text": "ma", "tag": "X", "suggested_tag": "PREFIX_PATTERN", "explanation": "Common prefix pattern"}, {"text": "halkita", "tag": "X", "suggested_tag": "GREEK_WORD", "explanation": "Greek word pattern"}, {"text": "a", "tag": "X", "suggested_tag": "VOWEL", "explanation": "Single vowel"}]}
+{"password": "september", "segments": [{"text": "septem", "tag": "X", "suggested_tag": "LATIN_PREFIX", "explanation": "Latin root prefix"}, {"text": "ber", "tag": "MONTH", "suggested_tag": null, "explanation": null}]}
+{"password": "december", "segments": [{"text": "de", "tag": "X", "suggested_tag": "PREFIX_PATTERN", "explanation": "Common prefix pattern"}, {"text": "c", "tag": "CONSONANTS"}, {"text": "ember", "tag": "MONTH"}, {"text": "er", "tag": "X", "suggested_tag": "SUFFIX_PATTERN", "explanation": "Common 2-letter suffix pattern"}]}
+{"password": "mariposa", "segments": [{"text": "ma", "tag": "X", "suggested_tag": "SPANISH_WORD", "explanation": "Spanish word stem"}, {"text": "ri", "tag": "X", "suggested_tag": "SPAIN", "explanation": "Reference to Spain"}, {"text": "posa", "tag": "X", "suggested_tag": "LATIN_WORD", "explanation": "Latin word root"}, {"text": "a", "tag": "english_PRT"}]}
+{"password": "gabriela", "segments": [{"text": "gabriela", "tag": "french_NOUN"}]}
+{"password": "iloveyou2", "segments": [{"text": "i", "tag": "english_PRON"}, {"text": "love", "tag": "english_VERB"}, {"text": "you", "tag": "english_PRON"}, {"text": "2", "tag": "NUMBER"}]}
+{"password": "kimberly", "segments": [{"text": "kimberly", "tag": "X", "suggested_tag": "FEMALE_NAME", "explanation": "Based on common female names in the United States"}]}
+{"password": "pictures", "segments": [{"text": "pic", "tag": "X", "suggested_tag": "PREFIX_PATTERN", "explanation": "Common prefix pattern in many words"}, {"text": "tures", "tag": "X", "suggested_tag": "SUFFIX_PATTERN", "explanation": "Common 6-letter suffix pattern"}, {"text": "", "tag": "english_CONJ", "suggested_tag": null}]}
+{"password": "hellokitty", "segments": [{"text": "hello", "tag": "english_PRON"}, {"text": "kitty", "tag": "X", "suggested_tag": "CAT_NAME", "explanation": "Popular cat name"}, {"text": "X", "tag": "X", "suggested_tag": "SUFFIX_PATTERN", "explanation": "Common single-character suffix pattern"}]}
+{"password": "babygirl1", "segments": [{"text": "baby", "tag": "french_NOUN"}, {"text": "girl", "tag": "french_NOUN"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "angelica", "segments": [{"text": "angelica", "tag": "french_NOUN"}]}
+{"password": "courtney", "segments": [{"text": "court", "tag": "X", "suggested_tag": "FEMALE_NAME", "explanation": "Female given name"}, {"text": "ney", "tag": "X", "suggested_tag": "SUFFIX_PATTERN", "explanation": "Common 3-letter suffix pattern"}]}
+{"password": "iloveyou1", "segments": [{"text": "i", "tag": "english_PRON"}, {"text": "love", "tag": "english_VERB"}, {"text": "you", "tag": "english_PRON"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "precious", "segments": [{"text": "pre", "tag": "PRE"}, {"text": "cious", "tag": "ADP"}, {"text": "ous", "tag": "SUF"}]}
+{"password": "inuyasha", "segments": [{"text": "inuyasha", "tag": "X", "suggested_tag": "JAPANESE_NAME", "explanation": "Japanese anime/manga character's name"}, {"text": "", "tag": ""}]}
+{"password": "veronica", "segments": [{"text": "veronica", "tag": "french_NOUN"}]}
+{"password": "sebastian", "segments": [{"text": "sebastian", "tag": "X", "suggested_tag": "MALE_NAME", "explanation": "Name of a male person"}]}
+{"password": "spiderman", "segments": [{"text": "spider", "tag": "english_X", "suggested_tag": "SUPERHERO_NAME", "explanation": "Name of a famous superhero"}, {"text": "man", "tag": "english_NOUN"}, {"text": "man", "tag": "english_X", "suggested_tag": "COMMON_NAME", "explanation": "Could be a common male name or title"}]}
+{"password": "christopher", "segments": [{"text": "christopher", "tag": "english_NOUN"}]}
+{"password": "0123456789", "segments": [{"text": "01234", "tag": "NUMBER"}, {"text": "56789", "tag": "NUMBER"}]}
+{"password": "barcelona", "segments": [{"text": "barcelona", "tag": "LOCATION"}]}
+{"password": "slipknot", "segments": [{"text": "slip", "tag": "X", "suggested_tag": "PREFIX_PATTERN", "explanation": "Possible prefix pattern"}, {"text": "knot", "tag": "X", "suggested_tag": "SURNAME", "explanation": "Appears to be a surname"}]}
+{"password": "cutiepie", "segments": [{"text": "cutie", "tag": "english_NOUN"}, {"text": "pie", "tag": "english_NOUN"}]}
+{"password": "789456123", "segments": [{"text": "789", "tag": "NUMBER"}, {"text": "456", "tag": "NUMBER"}, {"text": "123", "tag": "NUMBER"}]}
+{"password": "portugal", "segments": [{"text": "portugal", "tag": "LOCATION"}]}
+{"password": "volleyball", "segments": [{"text": "volley", "tag": "english_NOUN"}, {"text": "ball", "tag": "english_NOUN"}]}
+{"password": "rockstar", "segments": [{"text": "rock", "tag": "english_NOUN"}, {"text": "star", "tag": "english_NOUN"}]}
+{"password": "nicholas", "segments": [{"text": "nicholas", "tag": "MALE_NAME"}]}
+{"password": "cristian", "segments": [{"text": "cristian", "tag": "X", "suggested_tag": "SPANISH_NAME", "explanation": "Common Spanish given name"}]}
+{"password": "chrisbrown", "segments": [{"text": "chris", "tag": "MALE_NAME"}, {"text": "brown", "tag": "X", "suggested_tag": "ENAME", "explanation": "appears to be an English surname"}]}
+{"password": "internet", "segments": [{"text": "inter", "tag": "english_ADV"}, {"text": "net", "tag": "DN"}, {"text": "work", "tag": "X", "suggested_tag": "ENGLISH_WORD", "explanation": "common English word"}]}
+{"password": "strawberry", "segments": [{"text": "straw", "tag": "english_X", "suggested_tag": "FRUIT", "explanation": "Common fruit name"}, {"text": "berry", "tag": "english_X", "suggested_tag": "FRUIT", "explanation": "Common type of fruit"}, {"text": "y", "tag": "english_X", "suggested_tag": "CONSONANT", "explanation": "Typical single-character suffix in many words"}]}
+{"password": "garfield", "segments": [{"text": "gar", "tag": "X", "suggested_tag": "PREFIX_PATTERN", "explanation": "Common prefix pattern in many surnames"}, {"text": "field", "tag": "X", "suggested_tag": "SURNAME", "explanation": "Common English surname"}]}
+{"raw_output": "{\"password\": \"lollipop\", \"segments\": [{\"text\": \"lol\", \"tag\": \"X\", \"suggested_tag\": \"KB\", \"explanation\": \"Keyboard sequence\"}, {\"text\": \"lip\", \"tag\": \"X\", \"suggested_tag\": \"ENGLISH_NOUN\", \"explanation\": \"Common English noun prefix\"}, {\"text\": \"op\", \"tag\": \"X\", \"suggested_tag\": \"CONSONANTS\", \"explanation\": \"Consecutive consonants\"}, {\"text\": \"p\", \"tag\": \"X\", \"suggested_tag\": \"LETTER\", \"explanation\": \"Single letter\"}, {\"text\": \"!\" \"tag\": \"SPEC\"}]}", "parse_error": true}
+{"password": "qwertyuiop", "segments": [{"text": "qwerty", "tag": "KB"}, {"text": "uiop", "tag": "X", "suggested_tag": "KB", "explanation": "Keyboard pattern continuation"}, {"text": " ", "tag": "X", "suggested_tag": "SPACE", "explanation": "Space character present in password"}]}
+{"password": "superstar", "segments": [{"text": "super", "tag": "english_ADJ"}, {"text": "star", "tag": "french_NOUN"}]}
+{"password": "harrypotter", "segments": [{"text": "harry", "tag": "X", "suggested_tag": "MALE_NAME", "explanation": "Based on English given name frequency"}, {"text": "potter", "tag": "X", "suggested_tag": "SURNAME", "explanation": "Typical surname structure in English language"}]}
+{"password": "ihateyou", "segments": [{"text": "i", "tag": "english_PRON"}, {"text": "hate", "tag": "english_VERB"}, {"text": "you", "tag": "english_PRON"}]}
+{"password": "midnight", "segments": [{"text": "mid", "tag": "english_X", "suggested_tag": "PREFIX_PATTERN", "explanation": "Common prefix pattern"}, {"text": "night", "tag": "english_NOUN"}]}
+{"password": "christine", "segments": [{"text": "christine", "tag": "french_NAME"}]}
+{"password": "jordan23", "segments": [{"text": "jordan", "tag": "MALE_NAME"}, {"text": "23", "tag": "NUMBER"}]}
+{"password": "mercedes", "segments": [{"text": "mercedes", "tag": "french_NOUN"}]}
+{"password": "katherine", "segments": [{"text": "katherine", "tag": "french_NOUN"}]}
+{"password": "icecream", "segments": [{"text": "ice", "tag": "X", "suggested_tag": "ICE_CREAM_FLAVOR", "explanation": "Common ice cream flavor"}, {"text": "cream", "tag": "X", "suggested_tag": "DAIRY_PRODUCT", "explanation": "Common dairy product"}]}
+{"password": "johncena", "segments": [{"text": "john", "tag": "MALE_NAME"}, {"text": "cena", "tag": "X", "suggested_tag": "LAST_NAME", "explanation": "American actor and mixed martial artist name"}]}
+{"password": "lovelove", "segments": [{"text": "love", "tag": "english_VERB"}, {"text": "love", "tag": "english_VERB"}]}
+{"password": "benjamin", "segments": [{"text": "benedictus", "tag": "english_X", "suggested_tag": "LATIN_NAME", "explanation": "Latin root of the name Benjamin"}, {"text": "min", "tag": "english_X", "suggested_tag": "SUFFIX_PATTERN", "explanation": "Common 2-3 letter suffix pattern"}]}
+{"password": "metallica", "segments": [{"text": "metallica", "tag": "english_NOUN"}]}
+{"password": "myspace1", "segments": [{"text": "my", "tag": "english_DET"}, {"text": "space", "tag": "X", "suggested_tag": "PLACE_NAME", "explanation": "Common place name"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "babyblue", "segments": [{"text": "baby", "tag": "english_NOUN"}, {"text": "blue", "tag": "english_ADJ"}]}
