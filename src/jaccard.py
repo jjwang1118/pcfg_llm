@@ -1,20 +1,60 @@
 import json
+import re
+
+
+def _try_repair_json(raw: str) -> dict | None:
+    """嘗試修復常見 LLM JSON 語法錯誤後解析。回傳 dict 或 None。"""
+    # 直接解析
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        pass
+    # 修復：字串值後直接接下一個鍵（缺逗號），如 "value" "key":
+    fixed = re.sub(r'("(?:[^"\\]|\\.)*")(\s+)("(?:[^"\\]|\\.)*"\s*:)', r'\1,\2\3', raw)
+    try:
+        return json.loads(fixed)
+    except json.JSONDecodeError:
+        pass
+    # 修復：結尾字串未用雙引號閉合，如 "explanation": "some text'}]}
+    fixed2 = re.sub(r'("(?:[^"\\]|\\.)*)(}]\})\s*$', r'\1"\2', raw.strip())
+    try:
+        return json.loads(fixed2)
+    except json.JSONDecodeError:
+        pass
+    return None
 
 
 def read_jsonl(file_path: str) -> list:
-    """讀取 JSONL 檔案，回傳 (password, segments) 列表"""
+    """讀取 JSONL 檔案，回傳 (password, segments) 列表。
+    - 支援 JSON 值中含嵌入換行符的情況（串流解析）
+    - 若記錄為 {raw_output, parse_error} 格式，嘗試解析/修復 raw_output
+    """
     results = []
-    with open(file_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            if not line.strip():
-                continue
-            try:
-                data = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if not isinstance(data, dict) or 'password' not in data or 'segments' not in data:
-                continue
+    decoder = json.JSONDecoder()
+    content = open(file_path, 'r', encoding='utf-8').read()
+    pos = 0
+    while pos < len(content):
+        while pos < len(content) and content[pos] in ' \t\n\r':
+            pos += 1
+        if pos >= len(content):
+            break
+        try:
+            data, end = decoder.raw_decode(content, pos)
+            pos = end
+        except json.JSONDecodeError:
+            pos += 1
+            continue
+        if not isinstance(data, dict):
+            continue
+        # 正常格式
+        if 'password' in data and 'segments' in data:
             results.append((data['password'], data['segments']))
+            continue
+        # raw_output/parse_error 格式：嘗試修復並轉換
+        if 'raw_output' in data:
+            repaired = _try_repair_json(data['raw_output'])
+            if repaired and 'password' in repaired and 'segments' in repaired:
+                results.append((repaired['password'], repaired['segments']))
     return results
 
 
