@@ -1,0 +1,100 @@
+{"password": "123456789", "segments": [{"text": "123456789", "tag": "NUMBER"}]}
+{"password": "password", "segments": [{"text": "password", "tag": "nn1"}]}
+{"password": "iloveyou", "segments": [{"text": "i", "tag": "ppis1"}, {"text": "love", "tag": "vv0"}, {"text": "you", "tag": "ppy"}]}
+{"password": "princess", "segments": [{"text": "princess", "tag": "nn1"}]}
+{"password": "12345678", "segments": [{"text": "12345678", "tag": "NUMBER"}]}
+{"password": "babygirl", "segments": [{"text": "baby", "tag": "nn1"}, {"text": "girl", "tag": "nn1"}]}
+{"password": "michelle", "segments": [{"text": "michelle", "tag": "np1"}]}
+{"password": "sunshine", "segments": [{"text": "sunshine", "tag": "nn1"}]}
+{"password": "chocolate", "segments": [{"text": "chocolate", "tag": "nn1"}]}
+{"password": "password1", "segments": [{"text": "password", "tag": "nn1"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "butterfly", "segments": [{"text": "butterfly", "tag": "nn1"}]}
+{"password": "liverpool", "segments": [{"text": "liverpool", "tag": "np1"}]}
+{"password": "football", "segments": [{"text": "football", "tag": "nn1"}]}
+{"password": "jennifer", "segments": [{"text": "jennifer", "tag": "np1"}]}
+{"password": "1234567890", "segments": [{"text": "1234567890", "tag": "NUMBER"}]}
+{"password": "superman", "segments": [{"text": "superman", "tag": "np1"}]}
+{"password": "basketball", "segments": [{"text": "basketball", "tag": "nn1"}]}
+{"password": "elizabeth", "segments": [{"text": "elizabeth", "tag": "np1"}]}
+{"password": "tinkerbell", "segments": [{"text": "tinkerbell", "tag": "np1"}]}
+{"password": "samantha", "segments": [{"text": "samantha", "tag": "np1"}]}
+{"password": "danielle", "segments": [{"text": "danielle", "tag": "np1"}]}
+{"password": "jonathan", "segments": [{"text": "jonathan", "tag": "np1"}]}
+{"password": "987654321", "segments": [{"text": "987654321", "tag": "NUMBER"}]}
+{"password": "computer", "segments": [{"text": "computer", "tag": "nn1"}]}
+{"password": "whatever", "segments": [{"text": "whatever", "tag": "ddqv"}]}
+{"password": "spongebob", "segments": [{"text": "spongebob", "tag": "np1"}]}
+{"password": "softball", "segments": [{"text": "softball", "tag": "nn1"}]}
+{"password": "princesa", "segments": [{"text": "princesa", "tag": "np1"}]}
+{"password": "alexandra", "segments": [{"text": "alexandra", "tag": "np1"}]}
+{"password": "estrella", "segments": [{"text": "estrella", "tag": "np1"}]}
+{"password": "beautiful", "segments": [{"text": "beautiful", "tag": "jj"}]}
+{"password": "poohbear", "segments": [{"text": "pooh", "tag": "np1"}, {"text": "bear", "tag": "vvi"}]}
+{"password": "alexander", "segments": [{"text": "alexander", "tag": "np1"}]}
+{"password": "christian", "segments": [{"text": "christian", "tag": "jj"}]}
+{"password": "princess1", "segments": [{"text": "princess", "tag": "nn1"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "carolina", "segments": [{"text": "carolina", "tag": "np1"}]}
+{"password": "alejandro", "segments": [{"text": "alejandro", "tag": "np1"}]}
+{"password": "brittany", "segments": [{"text": "brittany", "tag": "np1"}]}
+{"password": "alejandra", "segments": [{"text": "alejandra", "tag": "np1"}]}
+{"password": "patricia", "segments": [{"text": "patricia", "tag": "np1"}]}
+{"password": "tequiero", "segments": [{"text": "te", "tag": "X"}, {"text": "quiero", "tag": "nn1"}]}
+{"password": "stephanie", "segments": [{"text": "stephanie", "tag": "np1"}]}
+{"password": "blink182", "segments": [{"text": "blink", "tag": "nn1"}, {"text": "182", "tag": "NUMBER"}]}
+{"password": "victoria", "segments": [{"text": "victoria", "tag": "np1"}]}
+{"password": "fernando", "segments": [{"text": "fernando", "tag": "np1"}]}
+{"password": "cristina", "segments": [{"text": "cristina", "tag": "np1"}]}
+{"password": "babygurl", "segments": [{"text": "baby", "tag": "nn1"}, {"text": "gurl", "tag": "X"}]}
+{"password": "baseball", "segments": [{"text": "baseball", "tag": "nn1"}]}
+{"password": "greenday", "segments": [{"text": "green", "tag": "jj"}, {"text": "day", "tag": "nnt1"}]}
+{"password": "november", "segments": [{"text": "november", "tag": "npm1"}]}
+{"password": "mahalkita", "segments": [{"text": "mahal", "tag": "np1"}, {"text": "kit", "tag": "X"}, {"text": "a", "tag": "at1"}]}
+{"password": "september", "segments": [{"text": "september", "tag": "npm1"}]}
+{"password": "december", "segments": [{"text": "december", "tag": "npm1"}]}
+{"password": "mariposa", "segments": [{"text": "mariposa", "tag": "np1"}]}
+{"password": "gabriela", "segments": [{"text": "gabriela", "tag": "np1"}]}
+{"password": "iloveyou2", "segments": [{"text": "i", "tag": "ppis1"}, {"text": "love", "tag": "vv0"}, {"text": "you", "tag": "ppy"}, {"text": "2", "tag": "NUMBER"}]}
+{"password": "kimberly", "segments": [{"text": "kimberly", "tag": "np1"}]}
+{"password": "pictures", "segments": [{"text": "pictures", "tag": "nn2"}]}
+{"password": "hellokitty", "segments": [{"text": "hello", "tag": "uh"}, {"text": "kitty", "tag": "np1"}]}
+{"password": "babygirl1", "segments": [{"text": "baby", "tag": "nn1"}, {"text": "girl", "tag": "nn1"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "angelica", "segments": [{"text": "angelica", "tag": "np1"}]}
+{"password": "courtney", "segments": [{"text": "courtney", "tag": "np1"}]}
+{"password": "iloveyou1", "segments": [{"text": "i", "tag": "ppis1"}, {"text": "love", "tag": "vv0"}, {"text": "you", "tag": "ppy"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "precious", "segments": [{"text": "precious", "tag": "jj"}]}
+{"password": "inuyasha", "segments": [{"text": "inuyasha", "tag": "X"}]}
+{"password": "veronica", "segments": [{"text": "veronica", "tag": "np1"}]}
+{"password": "sebastian", "segments": [{"text": "sebastian", "tag": "np1"}]}
+{"password": "spiderman", "segments": [{"text": "spiderman", "tag": "np1"}]}
+{"password": "christopher", "segments": [{"text": "christopher", "tag": "np1"}]}
+{"password": "0123456789", "segments": [{"text": "0123456789", "tag": "NUMBER"}]}
+{"password": "barcelona", "segments": [{"text": "barcelona", "tag": "np1"}]}
+{"password": "slipknot", "segments": [{"text": "slipknot", "tag": "nn1"}]}
+{"password": "cutiepie", "segments": [{"text": "cutie", "tag": "nn1"}, {"text": "pie", "tag": "X"}]}
+{"password": "789456123", "segments": [{"text": "789456123", "tag": "NUMBER"}]}
+{"password": "portugal", "segments": [{"text": "portugal", "tag": "np1"}]}
+{"password": "volleyball", "segments": [{"text": "volleyball", "tag": "nn1"}]}
+{"password": "rockstar", "segments": [{"text": "rockstar", "tag": "nn1"}]}
+{"password": "nicholas", "segments": [{"text": "nicholas", "tag": "np1"}]}
+{"password": "cristian", "segments": [{"text": "cristian", "tag": "jj"}]}
+{"password": "chrisbrown", "segments": [{"text": "chris", "tag": "np1"}, {"text": "brown", "tag": "jj"}]}
+{"password": "internet", "segments": [{"text": "internet", "tag": "nn1"}]}
+{"password": "strawberry", "segments": [{"text": "strawberry", "tag": "nn1"}]}
+{"password": "garfield", "segments": [{"text": "garfield", "tag": "np1"}]}
+{"password": "lollipop", "segments": [{"text": "lollipop", "tag": "nn1"}]}
+{"password": "qwertyuiop", "segments": [{"text": "qwerty", "tag": "jj"}, {"text": "ui", "tag": "X"}, {"text": "op", "tag": "X"}]}
+{"password": "superstar", "segments": [{"text": "superstar", "tag": "nn1"}]}
+{"password": "harrypotter", "segments": [{"text": "harry", "tag": "np1"}, {"text": "potter", "tag": "np1"}]}
+{"password": "ihateyou", "segments": [{"text": "i", "tag": "ppis1"}, {"text": "hate", "tag": "vv0"}, {"text": "you", "tag": "ppy"}]}
+{"password": "midnight", "segments": [{"text": "midnight", "tag": "nnt1"}]}
+{"password": "christine", "segments": [{"text": "christine", "tag": "np1"}]}
+{"password": "jordan23", "segments": [{"text": "jordan", "tag": "np1"}, {"text": "23", "tag": "NUMBER"}]}
+{"password": "mercedes", "segments": [{"text": "mercedes", "tag": "np"}]}
+{"password": "katherine", "segments": [{"text": "katherine", "tag": "np1"}]}
+{"password": "icecream", "segments": [{"text": "ice", "tag": "nn1"}, {"text": "cream", "tag": "nn1"}]}
+{"password": "johncena", "segments": [{"text": "john", "tag": "np1"}, {"text": "cena", "tag": "np1"}]}
+{"password": "lovelove", "segments": [{"text": "love", "tag": "nn1"}, {"text": "love", "tag": "nn1"}]}
+{"password": "benjamin", "segments": [{"text": "benjamin", "tag": "np1"}]}
+{"password": "metallica", "segments": [{"text": "metallica", "tag": "np1"}]}
+{"password": "myspace1", "segments": [{"text": "myspace", "tag": "np1"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "babyblue", "segments": [{"text": "baby", "tag": "nn1"}, {"text": "blue", "tag": "nn1"}]}
