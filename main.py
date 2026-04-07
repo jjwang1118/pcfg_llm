@@ -103,5 +103,6 @@ if __name__ == "__main__":
             repetition_penalty=repetition_penalty,
             enable_thinking=enable_thinking,
         )
+        result["result"]["password"] = pwd  # 強制用原始密碼覆蓋，避免 LLM 抄寫錯誤
         save_result(result["result"], output_path)
 

@@ -1,0 +1,100 @@
+{"password": "1qaz2wsx", "segments": [{"text": "1", "tag": "NUMBER"}, {"text": "q", "tag": "X"}, {"text": "az", "tag": "X"}, {"text": "2", "tag": "NUMBER"}, {"text": "wsx", "tag": "X"}]}
+{"password": "306187mn", "segments": [{"text": "306187", "tag": "NUMBER"}, {"text": "mn", "tag": "X"}]}
+{"password": "newyork911", "segments": [{"text": "new", "tag": "jj"}, {"text": "york", "tag": "np1"}, {"text": "911", "tag": "NUMBER"}]}
+{"password": "taqiyudin100587", "segments": [{"text": "taqi", "tag": "np1"}, {"text": "yudin", "tag": "np1"}, {"text": "100587", "tag": "NUMBER"}]}
+{"password": "nana0428", "segments": [{"text": "nana", "tag": "nn1"}, {"text": "0428", "tag": "NUMBER"}]}
+{"password": "bahamut24ritter", "segments": [{"text": "bahamut", "tag": "X"}, {"text": "24", "tag": "NUMBER"}, {"text": "ritter", "tag": "np1"}]}
+{"password": "g8882684832", "segments": [{"text": "g", "tag": "X"}, {"text": "8882684832", "tag": "NUMBER"}]}
+{"password": "x6k4TwjYwOAilWzI", "segments": [{"text": "x", "tag": "X"}, {"text": "6", "tag": "NUMBER"}, {"text": "k", "tag": "X"}, {"text": "4", "tag": "NUMBER"}, {"text": "twjywoailwzi", "tag": "X"}]}
+{"password": "kilgoris2008", "segments": [{"text": "kil", "tag": "X"}, {"text": "goris", "tag": "X"}, {"text": "2008", "tag": "NUMBER"}]}
+{"password": "109At35Rg", "segments": [{"text": "109", "tag": "NUMBER"}, {"text": "at", "tag": "X"}, {"text": "35", "tag": "NUMBER"}, {"text": "rg", "tag": "X"}]}
+{"password": "kegiatrang111", "segments": [{"text": "ke", "tag": "X"}, {"text": "gia", "tag": "X"}, {"text": "trang", "tag": "np1"}, {"text": "111", "tag": "NUMBER"}]}
+{"password": "ji3g4gp6", "segments": [{"text": "ji", "tag": "X"}, {"text": "3", "tag": "NUMBER"}, {"text": "g", "tag": "X"}, {"text": "4", "tag": "NUMBER"}, {"text": "gp", "tag": "X"}, {"text": "6", "tag": "NUMBER"}]}
+{"password": "jz1456bl8989", "segments": [{"text": "jz", "tag": "X"}, {"text": "1456", "tag": "NUMBER"}, {"text": "bl", "tag": "X"}, {"text": "8989", "tag": "NUMBER"}]}
+{"password": "qgn8so536ueprdtz", "segments": [{"text": "q", "tag": "X"}, {"text": "gn", "tag": "X"}, {"text": "8", "tag": "NUMBER"}, {"text": "so", "tag": "X"}, {"text": "536", "tag": "NUMBER"}, {"text": "u", "tag": "X"}, {"text": "epr", "tag": "X"}, {"text": "dtz", "tag": "X"}]}
+{"password": "harket1610", "segments": [{"text": "harket", "tag": "X"}, {"text": "1610", "tag": "NUMBER"}]}
+{"password": "auts6=ints6", "segments": [{"text": "auts", "tag": "X"}, {"text": "6", "tag": "NUMBER"}, {"text": "=", "tag": "SPEC"}, {"text": "ints", "tag": "np2"}, {"text": "6", "tag": "NUMBER"}]}
+{"password": "yie018343", "segments": [{"text": "yie", "tag": "X"}, {"text": "018343", "tag": "NUMBER"}]}
+{"password": "hitman12", "segments": [{"text": "hitman", "tag": "nn1"}, {"text": "12", "tag": "NUMBER"}]}
+{"password": "J1982awahAR", "segments": [{"text": "J", "tag": "X"}, {"text": "1982", "tag": "NUMBER"}, {"text": "awa", "tag": "X"}, {"text": "har", "tag": "X"}]}
+{"password": "arrahmane1000assamad", "segments": [{"text": "ar", "tag": "X"}, {"text": "rahman", "tag": "np1"}, {"text": "e", "tag": "X"}, {"text": "1000", "tag": "NUMBER"}, {"text": "as", "tag": "csa"}, {"text": "samad", "tag": "np1"}]}
+{"password": "gongyf1128", "segments": [{"text": "gong", "tag": "np1"}, {"text": "yf", "tag": "X"}, {"text": "1128", "tag": "NUMBER"}]}
+{"password": "10121990asa", "segments": [{"text": "10121990", "tag": "NUMBER"}, {"text": "as", "tag": "csa"}, {"text": "a", "tag": "at1"}]}
+{"password": "webcn1314", "segments": [{"text": "web", "tag": "nn1"}, {"text": "cn", "tag": "X"}, {"text": "1314", "tag": "NUMBER"}]}
+{"password": "k4gaktau", "segments": [{"text": "k", "tag": "X"}, {"text": "4", "tag": "NUMBER"}, {"text": "g", "tag": "X"}, {"text": "aktau", "tag": "np1"}]}
+{"password": "bombrock13", "segments": [{"text": "bomb", "tag": "nn1"}, {"text": "rock", "tag": "nn1"}, {"text": "13", "tag": "NUMBER"}]}
+{"password": "ch12adert", "segments": [{"text": "ch", "tag": "X"}, {"text": "12", "tag": "NUMBER"}, {"text": "a", "tag": "at1"}, {"text": "der", "tag": "X"}, {"text": "t", "tag": "X"}]}
+{"password": "saad1234", "segments": [{"text": "saad", "tag": "np1"}, {"text": "1234", "tag": "NUMBER"}]}
+{"password": "julcaty9286062", "segments": [{"text": "jul", "tag": "X"}, {"text": "caty", "tag": "np1"}, {"text": "9286062", "tag": "NUMBER"}]}
+{"password": "frere2500", "segments": [{"text": "frere", "tag": "np1"}, {"text": "2500", "tag": "NUMBER"}]}
+{"password": "areole110", "segments": [{"text": "are", "tag": "vbr"}, {"text": "ole", "tag": "jj"}, {"text": "110", "tag": "NUMBER"}]}
+{"password": "thavamani123", "segments": [{"text": "tha", "tag": "X"}, {"text": "va", "tag": "X"}, {"text": "mani", "tag": "np1"}, {"text": "123", "tag": "NUMBER"}]}
+{"password": "becakmania77", "segments": [{"text": "be", "tag": "vbi"}, {"text": "cak", "tag": "X"}, {"text": "mania", "tag": "nn1"}, {"text": "77", "tag": "NUMBER"}]}
+{"password": "9828055788mobile", "segments": [{"text": "9828055788", "tag": "NUMBER"}, {"text": "mobile", "tag": "jj"}]}
+{"password": "5dzemat5", "segments": [{"text": "5", "tag": "NUMBER"}, {"text": "dz", "tag": "X"}, {"text": "em", "tag": "ppho2"}, {"text": "at", "tag": "ii"}, {"text": "5", "tag": "NUMBER"}]}
+{"password": "Kosovar1", "segments": [{"text": "kosovar", "tag": "nn1"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "loveme99", "segments": [{"text": "love", "tag": "nn1"}, {"text": "me", "tag": "ppio1"}, {"text": "99", "tag": "NUMBER"}]}
+{"password": "murder5157", "segments": [{"text": "murder", "tag": "nn1"}, {"text": "5157", "tag": "NUMBER"}]}
+{"password": "sha157787", "segments": [{"text": "sha", "tag": "X"}, {"text": "157787", "tag": "NUMBER"}]}
+{"password": "chocolate1", "segments": [{"text": "chocolate", "tag": "nn1"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "MR011182", "segments": [{"text": "mr", "tag": "X"}, {"text": "011182", "tag": "NUMBER"}]}
+{"password": "ballguru05", "segments": [{"text": "ball", "tag": "nn1"}, {"text": "guru", "tag": "nn1"}, {"text": "05", "tag": "NUMBER"}]}
+{"password": "joe13819", "segments": [{"text": "joe", "tag": "np1"}, {"text": "13819", "tag": "NUMBER"}]}
+{"password": "b1r2n3u4r5", "segments": [{"text": "b", "tag": "X"}, {"text": "1", "tag": "NUMBER"}, {"text": "r", "tag": "X"}, {"text": "2", "tag": "NUMBER"}, {"text": "n", "tag": "X"}, {"text": "3", "tag": "NUMBER"}, {"text": "u", "tag": "X"}, {"text": "4", "tag": "NUMBER"}, {"text": "r", "tag": "X"}, {"text": "5", "tag": "NUMBER"}]}
+{"password": "belingaro123456", "segments": [{"text": "belin", "tag": "np1"}, {"text": "garo", "tag": "np1"}, {"text": "123456", "tag": "NUMBER"}]}
+{"password": "123expo123", "segments": [{"text": "123", "tag": "NUMBER"}, {"text": "expo", "tag": "np1"}, {"text": "123", "tag": "NUMBER"}]}
+{"password": "jan90020", "segments": [{"text": "jan", "tag": "npm1"}, {"text": "90020", "tag": "NUMBER"}]}
+{"password": "Qwerty12345", "segments": [{"text": "qwerty", "tag": "jj"}, {"text": "12345", "tag": "NUMBER"}]}
+{"password": "tongea3672", "segments": [{"text": "tonge", "tag": "np1"}, {"text": "a", "tag": "at1"}, {"text": "3672", "tag": "NUMBER"}]}
+{"password": "ConnorM1522", "segments": [{"text": "connor", "tag": "np1"}, {"text": "m", "tag": "X"}, {"text": "1522", "tag": "NUMBER"}]}
+{"password": "gabriel160594", "segments": [{"text": "gabriel", "tag": "np1"}, {"text": "160594", "tag": "NUMBER"}]}
+{"password": "asdfgh14", "segments": [{"text": "asdf", "tag": "X"}, {"text": "gh", "tag": "X"}, {"text": "14", "tag": "NUMBER"}]}
+{"password": "mateusz1", "segments": [{"text": "mateusz", "tag": "X"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "nana5776", "segments": [{"text": "nana", "tag": "nn1"}, {"text": "5776", "tag": "NUMBER"}]}
+{"password": "orlando1", "segments": [{"text": "orlando", "tag": "np1"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "chancho010", "segments": [{"text": "chan", "tag": "np1"}, {"text": "cho", "tag": "X"}, {"text": "010", "tag": "NUMBER"}]}
+{"password": "01pateta", "segments": [{"text": "01", "tag": "NUMBER"}, {"text": "pat", "tag": "np1"}, {"text": "eta", "tag": "X"}]}
+{"password": "cameronoah5", "segments": [{"text": "cameron", "tag": "np1"}, {"text": "oah", "tag": "X"}, {"text": "5", "tag": "NUMBER"}]}
+{"password": "knuddels12", "segments": [{"text": "knud", "tag": "np1"}, {"text": "dels", "tag": "vvz"}, {"text": "12", "tag": "NUMBER"}]}
+{"password": "20buscar", "segments": [{"text": "20", "tag": "NUMBER"}, {"text": "buscar", "tag": "nn1"}]}
+{"password": "godislove79", "segments": [{"text": "god", "tag": "np1"}, {"text": "is", "tag": "vbz"}, {"text": "love", "tag": "nn1"}, {"text": "79", "tag": "NUMBER"}]}
+{"password": "s1aut11111", "segments": [{"text": "s", "tag": "X"}, {"text": "1", "tag": "NUMBER"}, {"text": "aut", "tag": "X"}, {"text": "11111", "tag": "NUMBER"}]}
+{"password": "111111!@", "segments": [{"text": "111111", "tag": "NUMBER"}, {"text": "!@", "tag": "SPEC"}]}
+{"password": "000000ya73ps", "segments": [{"text": "000000", "tag": "NUMBER"}, {"text": "ya", "tag": "X"}, {"text": "73", "tag": "NUMBER"}, {"text": "ps", "tag": "X"}]}
+{"password": "ab12cd34", "segments": [{"text": "ab", "tag": "X"}, {"text": "12", "tag": "NUMBER"}, {"text": "cd", "tag": "X"}, {"text": "34", "tag": "NUMBER"}]}
+{"password": "blackbird8", "segments": [{"text": "blackbird", "tag": "nn1"}, {"text": "8", "tag": "NUMBER"}]}
+{"password": "hootiewho1", "segments": [{"text": "hootie", "tag": "np1"}, {"text": "who", "tag": "pnqs"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "iouxo030209", "segments": [{"text": "io", "tag": "X"}, {"text": "uxo", "tag": "X"}, {"text": "030209", "tag": "NUMBER"}]}
+{"password": "jiukhmnj45", "segments": [{"text": "jiu", "tag": "X"}, {"text": "khm", "tag": "X"}, {"text": "nj", "tag": "X"}, {"text": "45", "tag": "NUMBER"}]}
+{"password": "3051279a", "segments": [{"text": "3051279", "tag": "NUMBER"}, {"text": "a", "tag": "X"}]}
+{"password": "88cccccc", "segments": [{"text": "88", "tag": "NUMBER"}, {"text": "cccc", "tag": "np1"}, {"text": "cc", "tag": "X"}]}
+{"password": "megaman1", "segments": [{"text": "megaman", "tag": "X"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "saynavira6", "segments": [{"text": "say", "tag": "vvi"}, {"text": "navir", "tag": "X"}, {"text": "a", "tag": "at1"}, {"text": "6", "tag": "NUMBER"}]}
+{"password": "maximo900601", "segments": [{"text": "maximo", "tag": "np1"}, {"text": "900601", "tag": "NUMBER"}]}
+{"password": "zavidince1", "segments": [{"text": "z", "tag": "X"}, {"text": "avidin", "tag": "X"}, {"text": "ce", "tag": "X"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "TCCCXG87", "segments": [{"text": "tccc", "tag": "X"}, {"text": "xg", "tag": "X"}, {"text": "87", "tag": "NUMBER"}]}
+{"password": "a020304888", "segments": [{"text": "a", "tag": "X"}, {"text": "020304888", "tag": "NUMBER"}]}
+{"password": "10dean08", "segments": [{"text": "10", "tag": "NUMBER"}, {"text": "dean", "tag": "np1"}, {"text": "08", "tag": "NUMBER"}]}
+{"password": "01jub14070708", "segments": [{"text": "01", "tag": "NUMBER"}, {"text": "jub", "tag": "X"}, {"text": "14070708", "tag": "NUMBER"}]}
+{"password": "qwerty123", "segments": [{"text": "qwerty", "tag": "jj"}, {"text": "123", "tag": "NUMBER"}]}
+{"password": "numlugar5", "segments": [{"text": "num", "tag": "X"}, {"text": "lugar", "tag": "np1"}, {"text": "5", "tag": "NUMBER"}]}
+{"password": "bmarino5", "segments": [{"text": "b", "tag": "X"}, {"text": "marino", "tag": "np1"}, {"text": "5", "tag": "NUMBER"}]}
+{"password": "cuncon0804", "segments": [{"text": "c", "tag": "X"}, {"text": "uncon", "tag": "nn1"}, {"text": "0804", "tag": "NUMBER"}]}
+{"password": "vishnudon08", "segments": [{"text": "vishnu", "tag": "np1"}, {"text": "don", "tag": "np1"}, {"text": "08", "tag": "NUMBER"}]}
+{"password": "riccardo71", "segments": [{"text": "riccardo", "tag": "np1"}, {"text": "71", "tag": "NUMBER"}]}
+{"password": "fred0437", "segments": [{"text": "fred", "tag": "np1"}, {"text": "0437", "tag": "NUMBER"}]}
+{"password": "ambulance23", "segments": [{"text": "ambulance", "tag": "nn1"}, {"text": "23", "tag": "NUMBER"}]}
+{"password": "10oktober", "segments": [{"text": "10", "tag": "NUMBER"}, {"text": "oktober", "tag": "X"}]}
+{"password": "redmay22", "segments": [{"text": "red", "tag": "jj"}, {"text": "may", "tag": "vm"}, {"text": "22", "tag": "NUMBER"}]}
+{"password": "net123456789", "segments": [{"text": "net", "tag": "jj"}, {"text": "123456789", "tag": "NUMBER"}]}
+{"password": "people=sh1t", "segments": [{"text": "people", "tag": "nn"}, {"text": "=", "tag": "SPEC"}, {"text": "sh", "tag": "X"}, {"text": "1", "tag": "NUMBER"}, {"text": "t", "tag": "X"}]}
+{"password": "smoken48", "segments": [{"text": "smoke", "tag": "nn1"}, {"text": "n", "tag": "X"}, {"text": "48", "tag": "NUMBER"}]}
+{"password": "lancelot2006", "segments": [{"text": "lancelot", "tag": "np1"}, {"text": "2006", "tag": "NUMBER"}]}
+{"password": "m5mykbsdy", "segments": [{"text": "m", "tag": "X"}, {"text": "5", "tag": "NUMBER"}, {"text": "my", "tag": "appge"}, {"text": "kb", "tag": "X"}, {"text": "sdy", "tag": "X"}]}
+{"password": "con591472taroosodii", "segments": [{"text": "con", "tag": "X"}, {"text": "591472", "tag": "NUMBER"}, {"text": "taro", "tag": "nn1"}, {"text": "osod", "tag": "X"}, {"text": "ii", "tag": "mc"}]}
+{"password": "born2win", "segments": [{"text": "born", "tag": "vvn"}, {"text": "2", "tag": "NUMBER"}, {"text": "win", "tag": "vvi"}]}
+{"password": "RamPage2008", "segments": [{"text": "rampage", "tag": "nn1"}, {"text": "2008", "tag": "NUMBER"}]}
+{"password": "cok1cok1", "segments": [{"text": "cok", "tag": "X"}, {"text": "1", "tag": "NUMBER"}, {"text": "cok", "tag": "X"}, {"text": "1", "tag": "NUMBER"}]}
+{"password": "dawets08", "segments": [{"text": "da", "tag": "npx"}, {"text": "wets", "tag": "vvz"}, {"text": "08", "tag": "NUMBER"}]}
+{"password": "5393117123mgm92", "segments": [{"text": "5393117123", "tag": "NUMBER"}, {"text": "mgm", "tag": "X"}, {"text": "92", "tag": "NUMBER"}]}
+{"password": "alireza3664369", "segments": [{"text": "alireza", "tag": "np1"}, {"text": "3664369", "tag": "NUMBER"}]}

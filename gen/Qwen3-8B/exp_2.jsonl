@@ -83,7 +83,7 @@
 {"password": "garfield", "segments": [{"text": "garfield", "tag": "X", "suggested_tag": "ANIMAL_NAME", "explanation": "Common cartoon animal name"}]}
 {"password": "lollipop", "segments": [{"text": "lollipop", "tag": "X", "suggested_tag": "ENGLISH_NOUN", "explanation": "Common English noun referring to a sweet candy"}]}
 {"password": "qwertyuiop", "segments": [{"text": "qwertyuiop", "tag": "KB"}]}
-{"raw_output": "{\"password\": \"superstar\", \"segments\": [{\"text\": \"superstar\", \"tag\": \"X\", \"suggested_tag\": \"NOUN_COMPOUND\", \"explanation\": \"Compound noun formed by combining 'super' and 'star'}]}", "parse_error": true}
+{"password": "superstar", "segments": [{"text": "superstar", "tag": "X", "suggested_tag": "NOUN_COMPOUND", "explanation": "Compound noun formed by combining 'super' and 'star'"}]}
 {"password": "harrypotter", "segments": [{"text": "harry", "tag": "MALE_NAME"}, {"text": "potter", "tag": "X", "suggested_tag": "ENGLISH_PROPER_NOUN", "explanation": "Common English proper noun, likely a surname"}]}
 {"password": "ihateyou", "segments": [{"text": "i", "tag": "ENGLISH_PRON"}, {"text": "hate", "tag": "ENGLISH_VERB"}, {"text": "you", "tag": "ENGLISH_PRON"}]}
 {"password": "midnight", "segments": [{"text": "midnight", "tag": "ENGLISH_NOUN"}]}

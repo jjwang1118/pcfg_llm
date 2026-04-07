@@ -1,5 +1,5 @@
 # 當前使用的模型名稱（須對應 model/ 下的資料夾名稱）
-active_model: "Llama-3.1-8B-Instruct"
+active_model: "semantic-guesser"
 
 # 模型參數（所有模型共用的預設參數，可在 model_overrides 中覆寫）
 model_defaults:
@@ -42,7 +42,7 @@ output:
 
 # Jaccard 比較設定
 jaccard:
-  first_model: "Qwen3-8B" # 第一個模型名稱
+  first_model: "semantic-guesser" # 第一個模型名稱
   first_exp: 2 # 第一個實驗編號
-  second_model: "Llama-3.1-8B-Instruct" # 第二個模型名稱
+  second_model: "Qwen3-8B" # 第二個模型名稱
   second_exp: 2 # 第二個實驗編號
