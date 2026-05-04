@@ -1,42 +1,42 @@
 # Tag Reference
 
 ## Linguistic POS Tags
-
+> https://claude.ai/share/4c6fa4e9-6fd4-4dba-b7cc-a71df3b7ef12
 ### English
 
 | Tag | Description |
 |-----|-------------|
 | ENGLISH_NOUN | English nouns (including pronouns) constitute the largest and most frequent word class, characterized by their ability to inflect for number, combine with determiners, and function primarily as subjects or objects to denote anything from physical objects to abstract concepts. |
-| ENGLISH_VERB | |
-| ENGLISH_PRON | |
-| ENGLISH_ADJ | |
-| ENGLISH_ADV | |
-| ENGLISH_ADP | |
-| ENGLISH_CONJ | |
-| ENGLISH_DET | |
-| ENGLISH_PRT | |
-| ENGLISH_NUM | |
+| ENGLISH_VERB | An English verb is a word that describes an action (run), occurrence (happen), or state of being (exist, feel) |
+| ENGLISH_PRON | A pronoun is a word or phrase that substitutes for a noun or noun phrase. Pronouns are traditionally classified as a part of speech, with subtypes including personal, possessive, reflexive, reciprocal, demonstrative, relative, interrogative, and indefinite pronouns. Their meaning often depends on an antecedent via anaphora (e.g., "he" referring back to "that poor man"). The adjectival form is "pronominal," which also describes phrases functioning as pronouns, such as "the one" in "that's not the one I wanted." |
+| ENGLISH_ADJ | English adjectives are an open word class that semantically denote properties such as size, colour, mood, quality, and age. They head adjective phrases and typically function as modifiers in noun phrases or complements in verb phrases (e.g., it looks good). Most adjectives inflect for grade (big → bigger → biggest) or use more/most for comparison, and are modifiable by very. Many form adverbs via the suffix -ly (e.g., finally). Some adjectives also license their own complements (e.g., happy that you're here).|
+| ENGLISH_ADV | An English adverb is a word that modifies verbs, adjectives, other adverbs, or entire sentences, expressing manner, time, place, frequency, degree, or speaker stance (e.g., unfortunately). Often formed by adding -ly to adjectives (e.g., quick → quickly), many also stand alone (e.g., well, fast, very). Unlike adjectives, adverbs do not modify nouns, and they are flexible in sentence position.|
+| ENGLISH_ADP | An adposition is a closed-class word that links a noun phrase to its syntactic head, expressing spatial, temporal, or semantic relationships. It serves as a cover term for prepositions (preceding the complement, e.g., in the box), postpositions (following the complement, e.g., Japanese ni), and circumpositions (enclosing the complement). Adpositions show no inflectional variation and form an adpositional phrase with their complement.|
+| ENGLISH_CONJ |An English conjunction is a closed-class, uninflected word that connects words, phrases, or clauses. The three main types are: coordinating conjunctions (FANBOYS: for, and, nor, but, or, yet, so) which join elements of equal grammatical rank; correlative conjunctions (both...and, either...or) which work in pairs; and subordinating conjunctions (because, although, while, since) which link a dependent clause to an independent clause, expressing relationships such as cause, contrast, or time |
+| ENGLISH_DET | An English determiner is a closed-class word that precedes a noun or noun phrase to specify its reference, definiteness, quantity, or ownership. Subtypes include articles (a, the), demonstratives (this, that), possessives (my, your), quantifiers (some, many, few), distributives (each, every), and interrogative determiners (which, what). Unlike adjectives, determiners are not gradable and typically cannot appear as predicates.|
+| ENGLISH_PRT | An English particle is a function word that must be associated with another word or phrase to impart meaning and does not fit neatly into other parts of speech. Common types include adverb particles in phrasal verbs (give up, turn on), the infinitive marker to, and the negative particle not. Particles are uninflected and have no standalone lexical definition.|
+| ENGLISH_NUM | An English numeral is a word or phrase that expresses a precise numerical quantity. Cardinal numerals (one, two, twelve) indicate count and can replace articles before nouns. Ordinal numerals (first, second) indicate sequence. Numerals may function as determiners, nouns, or pronouns depending on context, and are distinct from quantifiers like many or several, which indicate only approximate quantity|
 | ENGLISH_X | |
 
 ### German
 
 | Tag | Description |
 |-----|-------------|
-| GERMAN_NOUN | |
-| GERMAN_ADJ | |
-| GERMAN_ADV | |
-| GERMAN_PRON | |
-| GERMAN_VERB | |
+| GERMAN_NOUN | A German noun (Nomen/Substantiv) is a word that names a person, place, thing, or idea. Every German noun carries one of three grammatical genders (masculine der, feminine die, neuter das), is always capitalized in writing, and declines across four cases (Nominativ, Akkusativ, Dativ, Genitiv) and two numbers (singular/plural). Plural forms are irregular and must be learned individually; compound nouns inherit the gender of the final component.|
+| GERMAN_ADJ | A German adjective (Adjektiv) is a word that modifies a noun, expressing properties such as size, colour, or quality. When used attributively (before a noun), it must agree with the noun in gender, number, and case, following one of three declension patterns: weak (after definite articles), mixed (after indefinite articles/possessives), or strong (no preceding article). When used predicatively (after sein, bleiben, werden) or adverbially, it remains uninflected. |
+| GERMAN_ADV | A German adverb (Adverb) is an uninflected word that modifies verbs, adjectives, or other adverbs, providing information about place (hier, dort), time (gestern, jetzt), manner (schnell, gern), or cause (deshalb, trotzdem). Unlike adjectives, adverbs never take case endings. A key German feature is the -erweise suffix for sentence-level adverbs expressing the speaker's stance (e.g., glücklicherweise = "fortunately"). Pronominal adverbs (da- / wo- + preposition) replace prepositional phrases for inanimate referents.|
+| GERMAN_PRON | A German pronoun (Pronomen) is a word that substitutes for a noun or noun phrase. It inflects for case (Nominativ, Akkusativ, Dativ, Genitiv), gender, number, and person. Major subtypes include personal pronouns (ich, du, er/sie/es), possessive pronouns (mein, dein), reflexive pronouns (mich/sich—used when subject and object are the same), demonstrative pronouns (dieser, jener), and relative pronouns (der, welcher). The formal second-person pronoun Sie is always capitalized.|
+| GERMAN_VERB | A German verb (Verb) is a word expressing an action or state of being, conjugated to reflect person (1st/2nd/3rd), number (singular/plural), tense (Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I/II), mood (Indikativ, Imperativ, Konjunktiv I/II), and voice (active/passive). Verbs are classified as weak (regular), strong (with stem vowel changes), or mixed. In main clauses, the conjugated verb always occupies the second position; in subordinate clauses, it moves to the final position.|
 
 ### French
 
 | Tag | Description |
 |-----|-------------|
-| FRENCH_NOUN | |
-| FRENCH_ADJ | |
-| FRENCH_ADV | |
-| FRENCH_PRON | |
-| FRENCH_VERB | |
+| FRENCH_NOUN | A French noun (nom) is a word naming a person, place, thing, or idea. Every French noun has a grammatical gender — either masculine (le/un) or feminine (la/une) — and inflects for number (singular/plural, typically by adding -s in writing). There is no neuter gender. Gender is often arbitrary and must be memorized; it governs agreement in articles, adjectives, and pronouns. Unlike German, French nouns are not capitalized unless they are proper nouns.|
+| FRENCH_ADJ |A French adjective (adjectif) is a word that modifies a noun and must agree with it in gender (masculine/feminine) and number (singular/plural), following up to four distinct forms (e.g., petit / petite / petits / petites). Most adjectives are placed after the noun (une maison blanche), but a core group of common adjectives — typically describing beauty, age, goodness, or size (BAGS) — precede the noun (e.g., un grand homme). Some adjectives change meaning depending on position. |
+| FRENCH_ADV | A French adverb (adverbe) is an invariable word that modifies a verb, adjective, prepositional phrase, or another adverb. It does not agree in gender or number. Most French adverbs are derived from adjectives by adding -ment to the feminine form (e.g., lente → lentement); adjectives ending in -ant/-ent yield -amment/-emment. Types include place (ici, là), time (maintenant, hier), manner (bien, vite), quantity (très, assez), and negation (ne...jamais). In simple tenses, adverbs typically follow the verb; in compound tenses, short adverbs appear between the auxiliary and the past participle.|
+| FRENCH_PRON |A French pronoun (pronom) is a word that substitutes for a noun phrase to avoid repetition. French pronouns inflect for person, number, gender, and case (subject, direct object, indirect object, stressed/disjunctive). Key subtypes include personal subject pronouns (je, tu, il/elle, nous, vous, ils/elles), object clitics (me, te, lui, y, en), reflexive pronouns (se), possessive pronouns (le mien), demonstrative pronouns (celui, celle), and relative pronouns (qui, que, dont, où). As a non-pro-drop language, French almost always requires an explicit subject pronoun. |
+| FRENCH_VERB | A French verb (verbe) is a word expressing action or state, conjugated to reflect mood (indicatif, subjonctif, conditionnel, impératif), tense (past, present, future), person (1st/2nd/3rd), and number (singular/plural). French has three regular verb groups (-er, -ir, -re) plus numerous irregular verbs. Compound tenses are formed with auxiliary avoir or être plus a past participle; with être, the participle agrees in gender and number with the subject. French also uses reflexive verbs (se laver), and negation is expressed with the two-part structure ne...pas around the conjugated verb.|
 
 ### Other
 
@@ -48,35 +48,35 @@
 
 | Tag | Description |
 |-----|-------------|
-| MALE_NAME | |
-| FEMALE_NAME | |
-| CN_NAME_ABBR | |
-| WKNE | |
-| UBE | |
-| LOCATION | |
+| MALE_NAME | A token or span identifying a masculine personal name — given names, full names, or common name variants typically associated with male individuals (e.g., James, 大衛, Mohammed). This tag covers first names, full names, and culturally recognized male name patterns. It excludes titles, honorifics, and gender-neutral names unless context confirms male gender. |
+| FEMALE_NAME | A token or span identifying a feminine personal name — given names, full names, or common name variants typically associated with female individuals (e.g., Emma, 小芳, Fatima). Analogous to MALE_NAME, it covers first names and full names where female gender is established by cultural convention or context.|
+| CN_NAME_ABBR | A span representing an abbreviated form of a Chinese proper noun — typically a shortened version of an institution, organization, person name, or brand that is recognizable without the full form (e.g., 台大 → 國立臺灣大學, 健保 → 全民健康保險, 北大 → 北京大學). These abbreviations are culturally established and differ from acronyms in that they are phonologically derived from the source name rather than initialism-based.|
+| WKNE | A named entity that is globally or regionally well-known and can be identified without additional context — typically large organizations, flagship brands, landmark institutions, or universally recognized proper nouns (e.g., Apple, Google, 聯合國, McDonald's, 台積電). Distinguished from generic organization or location tags by the entity's high public recognizability and unambiguous referent. The model should assign this tag when the entity appears in knowledge bases or widely indexed corpora with a stable, singular identity.|
+| UBE |A span that appears to refer to a business, brand, or commercial entity but cannot be verified against known databases or corpora — typically small businesses, local shops, informal brands, newly founded companies, or entities with insufficient public information (e.g., 小明髮廊, XYZ 工程行). Used when the text contains strong signals of a commercial entity (e.g., 行, 店, 公司, Co., Ltd.) but the specific entity is not identifiable as a WKNE or standard organization. |
+| LOCATION |A span identifying a geographical or spatial entity — including countries, cities, regions, addresses, landmarks, and named geographical features (e.g., Taiwan, 台北市, Eiffel Tower, 淡水河). May include both physical locations and geopolitical entities (GPE). Subcategories often distinguish between named places (Paris), administrative regions (Île-de-France), and natural features (Amazon River), though this tag treats them as a unified class unless further subdivided. |
 
 ## Date & Number
 
 | Tag | Description |
 |-----|-------------|
-| YEAR | |
-| DATE_6DIGIT | |
-| DATE_8DIGIT | |
-| MONTH | |
-| CN_MOBILE | |
-| NUMBER | |
+| YEAR |A 4-digit token representing a calendar year, typically in the range of a plausible historical or future year (e.g., 1999, 2024, 2035). Covers standalone year references in numeric form. Does not include 2-digit abbreviated years (e.g., '99) or year ranges unless the full 4-digit form is present.Pattern: \d{4} where the value falls within a valid year range (e.g., 1000–2999) Examples: 2024, 1998, 2000 |
+| DATE_6DIGIT | A 6-digit string encoding a compact date, most commonly in YYYYMM or YYMMDD format. Used in formal documents, invoices, IDs, and records where a shortened date representation is standard.Pattern: \d{6}.Common formats: * YYYYMM → 202401 = January 2024 * YYMMDD → 240101 = January 1st, 2024. Examples: 202401, 991231, 240315 |
+| DATE_8DIGIT |An 8-digit string encoding a full date, most commonly in YYYYMMDD format. Widely used in government documents, databases, and Chinese administrative systems as the standard machine-readable date format. Pattern: \d{8}. Common format:YYYYMMDD → 20240101 = January 1st, 2024. Examples: 20240101, 19991231, 20080815 |
+| MONTH | A token or span representing a calendar month, either as a numeral, a written-out name, or a culture-specific expression. Covers standalone month references without a full date context. Pattern variants: * Numeric: 1–12 * With suffix: 1月, 12月, 三月 * Full name (EN): January … December * Abbreviated (EN): Jan, Feb, Mar …Examples: 3月, December, Jan, 十二月 |
+| CN_MOBILE | An 11-digit string representing a mainland China mobile phone number, beginning with 1 followed by a carrier-assigned second digit. Follows the format standardized by the Ministry of Industry and Information Technology (MIIT). Pattern: 1[3-9]\d{9}. Carrier prefixes (second digit): * 3x, 5x, 8x → China Unicom * 3x, 5x, 8x, 9x → China Telecom * 3x, 4x, 5x, 6x, 7x, 8x, 9x → China Mobile. Examples: 13812345678, 17600001234, 19912345678 |
+| NUMBER | A catch-all tag for numeric tokens or spans that do not match more specific tags (YEAR, DATE_*, CN_MOBILE). Covers integers, decimals, percentages, quantities, ordinals, and written-out numbers across languages. Subtypes covered: * Cardinal integers: 42, 1,000,000 * Decimals: 3.14, 0.5 * Percentages: 85%, 百分之五* Written-out: 三十二, twenty, deux * Ordinals: 第三, 3rd, 第1名. Examples: 42, 3.14, 85%, 三十二, 1,500 |
 
 ## String Patterns & Structure
 
 | Tag | Description |
 |-----|-------------|
-| EMAIL | |
-| DN | |
-| KB | |
-| SR | |
-| PRE | |
-| SUF | |
-| PY | |
-| CONSONANTS | |
-| SPEC | |
-| LEET | |
+| EMAIL |A string matching the standard email address format: a local part, @ symbol, and domain. May appear standalone or embedded within text. Pattern: [\w.+-]+@[\w-]+\.[a-zA-Z]{2,}. Examples: user@example.com, john.doe+filter@mail.co.uk |
+| DN |A string representing a fully qualified domain name (FQDN) or hostname, consisting of labels separated by dots, ending in a valid top-level domain (TLD).Pattern: [\w-]+(\.[\w-]+)+\.[a-zA-Z]{2,}. Examples: google.com, mail.example.org, api.service.io|
+| KB |A string formed by consecutive or adjacent keys on a standard keyboard layout (QWERTY/QWERTZ/AZERTY), typically used as weak passwords or shortcuts. Includes horizontal, vertical, and diagonal key sequences. Pattern logic: Adjacent key traversal on keyboard grid. Examples: qwerty, asdf, 1q2w3e, zxcvbn, qaz123 |
+| SR | A string composed of monotonically increasing or decreasing characters — numeric, alphabetic, or mixed — forming a predictable sequence. Common in weak passwords and placeholder inputs. Subtypes:* Numeric ascending: 12345, 123456789 * Numeric descending: 987654 * Alpha ascending: abcde, abcdefg * Repeating: aaaa, 1111, zzzz. Examples: 123456, abcdef, 9876, aaaa|
+| PRE | A string segment identified as a meaningful prefix — a morpheme, word, or pattern that appears at the beginning of a token and carries derivational or structural significance. Examples: un-, pre-, re-, super-, anti-, non-. Use case: Morphological analysis, tokenization, password structure decomposition (e.g., Super in Super123!)|
+| SUF | A string segment identified as a meaningful suffix — a morpheme, word, or pattern that appears at the end of a token, often indicating inflection, derivation, or padding. Examples: -ing, -tion, -ly, -er, 123, !, @2024. Use case: Morphological analysis or password pattern decomposition (e.g., @123 in Password@123)|
+| PY | A string matching Mandarin Chinese romanization (Pinyin) — a sequence of valid Pinyin syllables with or without tone marks, used to represent Chinese words phonetically in ASCII. Pattern logic: Valid Pinyin initials + finals (e.g., zh, ch, sh + vowel combinations). Examples: wǒ, zhongguo, beijing, xiao, ni hao. Use case: Chinese user input detection, password patterns derived from Chinese words (e.g., wode123 from 我的) |
+| CONSONANTS |A string composed exclusively of consonant characters with no vowels, typically indicating an abbreviation, acronym, keyboard pattern, or non-phonetic token. Consonants (EN): b c d f g h j k l m n p q r s t v w x y z. Examples: qwrty, nxt, mgmt, sht, bcd, strng. Use case: Detecting abbreviations, Pinyin consonant-only input (e.g., zh for 這/者), or weak password segments |
+| SPEC | A string or token composed of non-alphanumeric symbols, including punctuation, currency signs, mathematical operators, and Unicode special characters.Character set: ! @ # $ % ^ & * ( ) _ + - = [ ] { } | ; ' : " , . / < > ? ` ~ Examples: !@#$, ***, ----, ©™, @#!%. Use case: Password strength analysis, input sanitization, special character detection in structured text |
+| LEET | A string using leet substitutions — systematic replacement of standard letters with visually similar numbers or symbols — derived from "elite" hacker culture. Common leet substitutions replace letters with visually similar numbers or symbols: a becomes 4 or @, e becomes 3, i becomes 1 or !, o becomes 0, s becomes 5 or $, t becomes 7, and l becomes 1. Examples: p@ssw0rd, h3ll0, l33t, @dm1n, s3cur1ty. Use case: Password pattern analysis, obfuscation detection, adversarial input recognition|
