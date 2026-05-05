@@ -42,12 +42,14 @@ def visualize_single_password(password: str, segments_8b: list, segments_08b: li
                 seg_center = current_pos + seg_len / 2
                 # 交錯高度避免重疊
                 y_offset = -0.7 if idx % 2 == 0 else -1.3
-                # 顯示 tag (字體放大)
-                ax.text(seg_center, y_offset, tag, ha='center', va='top', 
+                # 顯示 tag（有 alt_tag 時用斜線分隔）
+                alt_tag = seg.get('alt_tag', '')
+                display_tag = f"{tag}/{alt_tag}" if alt_tag else tag
+                ax.text(seg_center, y_offset, display_tag, ha='center', va='top',
                        fontsize=14, color=tag_color, fontweight='bold')
                 # 畫底線標示範圍
-                ax.plot([current_pos + 0.1, current_pos + seg_len - 0.1], 
-                       [y_offset + 0.15, y_offset + 0.15], 
+                ax.plot([current_pos + 0.1, current_pos + seg_len - 0.1],
+                       [y_offset + 0.15, y_offset + 0.15],
                        color=tag_color, linewidth=2, alpha=0.5)
             
             # 繪製切割線（除了最後一個 segment）
@@ -64,8 +66,13 @@ def visualize_single_password(password: str, segments_8b: list, segments_08b: li
         ax.set_yticks([])
     
     # 產生 segments 摘要
-    seg_summary_8b = " | ".join([f"{s['text'].strip()}({s.get('tag','X')})" for s in segments_8b if s['text'].strip()])
-    seg_summary_08b = " | ".join([f"{s['text'].strip()}({s.get('tag','X')})" for s in segments_08b if s['text'].strip()])
+    def _tag_label(s):
+        tag = s.get('tag', 'X')
+        alt = s.get('alt_tag', '')
+        return f"{tag}/{alt}" if alt else tag
+
+    seg_summary_8b = " | ".join([f"{s['text'].strip()}({_tag_label(s)})" for s in segments_8b if s['text'].strip()])
+    seg_summary_08b = " | ".join([f"{s['text'].strip()}({_tag_label(s)})" for s in segments_08b if s['text'].strip()])
     
     title_8b = f'{first_model_name}: {seg_summary_8b}'
     title_08b = f'{second_model_name}: {seg_summary_08b}'

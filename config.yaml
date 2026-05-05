@@ -1,5 +1,5 @@
 # 當前使用的模型名稱（須對應 model/ 下的資料夾名稱）
-active_model: "semantic-guesser"
+active_model: "Llama-3.1-8B-Instruct"
 
 # 模型參數（所有模型共用的預設參數，可在 model_overrides 中覆寫）
 model_defaults:
@@ -30,19 +30,44 @@ data:
 
 # Prompt 設定
 prompt:
-  template: 1 # 0=預設, 1=開放, 2=嚴格, 3=簡化
+  template: 7 # 0=預設, 1=開放, 2=嚴格, 3=簡化, 4=開放+X代價, 5=開放+X代價+失敗範例, 6=RAG增強
   tag_summary: 0 # 0=完整標籤+允許X, 1=完整標籤+禁止新標籤
   enable_thinking: false
 
 # 輸出設定
 output:
   gen_dir: "gen"
-  experiment_number: 2 # 實驗編號
+  experiment_number: 4 # 實驗編號
   statistics_dir: "statistics" # 統計輸出目錄
 
 # Jaccard 比較設定
 jaccard:
-  first_model: "semantic-guesser" # 第一個模型名稱
-  first_exp: 2 # 第一個實驗編號
-  second_model: "Qwen3-8B" # 第二個模型名稱
-  second_exp: 2 # 第二個實驗編號
+  first_model: "Llama-3.1-8B-Instruct" # 第一個模型名稱
+  first_exp: 3 # 第一個實驗編號
+  second_model: "Llama-3.1-8B-Instruct" # 第二個模型名稱
+  second_exp: 4 # 第二個實驗編號
+
+# zxcvbn 比較設定（不填則沿用 active_model 和 experiment_number）
+zxcvbn_eval:
+  model: "Llama-3.1-8B-Instruct" # 
+  exp: 4
+
+RAG:
+  enabled: true
+
+  # --- 離線建索引 (rag_index_offline.py) ---
+  index:
+    knowledge_base: "docs/tag_rag.md"   # 知識庫 markdown 路徑
+    embedding_model: "BAAI/bge-m3"       # HuggingFace embedding 模型
+    device: "cuda"                        # cuda / cpu
+    normalize_embeddings: true
+    index_path: "faiss_index"            # FAISS 索引儲存目錄
+
+  # --- 線上檢索 (retrieval) ---
+  retrieval:
+    top_k: 3                  # 每次撈幾個最相近的 tag 定義
+    score_threshold: 0.17      # 低於此分數的結果捨棄
+    inject_position: "before_examples"   # 注入 prompt 的位置
+    max_context_tokens: 512   # 注入內容的 token 上限
+    two_pass: true           # true 時啟用兩階段推論：第一次切分 → segments query RAG → 第二次標注
+

@@ -64,7 +64,10 @@ def parse_json_result(content: str) -> dict:
     """將清理後的字串解析為 JSON"""
     content = clean_json_output(content)
     try:
-        return json.loads(content)
+        parsed = json.loads(content)
+        if isinstance(parsed, dict):
+            return parsed
+        return {"raw_output": content, "parse_error": True}
     except json.JSONDecodeError:
         return {"raw_output": content, "parse_error": True}
 
@@ -106,3 +109,56 @@ def save_result(result: dict, output_path: str) -> None:
     with open(output_path, "a", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False)
         f.write("\n")
+
+
+def convert_seg7_to_jsonl(input_path: str, output_path: str) -> int:
+    """
+    將 template 7 的原始輸出 JSONL 轉換為結構化 segmentation JSONL。
+
+    輸入格式（每行）：
+      {"raw_output": "john 1990 !", "parse_error": true, "password": "john1990!"}
+    輸出格式（每行）：
+      {"password": "john1990!", "segments": [{"text": "john"}, {"text": "1990"}, {"text": "!"}]}
+
+    回傳成功轉換的筆數。
+    """
+    converted = 0
+    skipped = 0
+    os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
+    with open(input_path, encoding="utf-8") as f_in, \
+         open(output_path, "w", encoding="utf-8") as f_out:
+        for lineno, line in enumerate(f_in, 1):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError:
+                print(f"[skip] line {lineno}: JSON parse error")
+                skipped += 1
+                continue
+
+            password = record.get("password", "")
+            raw = record.get("raw_output", "").strip()
+
+            if not raw or not password:
+                print(f"[skip] line {lineno}: missing password or raw_output")
+                skipped += 1
+                continue
+
+            # 取第一行，避免模型多輸出說明文字
+            raw = raw.splitlines()[0].strip()
+            segments = [{"text": seg} for seg in raw.split() if seg]
+
+            # 驗證：所有 segment 拼起來應等於原始密碼
+            reconstructed = "".join(s["text"] for s in segments)
+            if reconstructed != password:
+                print(f"[warn] line {lineno}: '{password}' != reconstructed '{reconstructed}'")
+
+            result = {"password": password, "segments": segments}
+            json.dump(result, f_out, ensure_ascii=False)
+            f_out.write("\n")
+            converted += 1
+
+    print(f"完成：{converted} 筆轉換，{skipped} 筆跳過 → {output_path}")
+    return converted

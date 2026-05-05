@@ -1,6 +1,7 @@
 from src.tag import password_tag
 
 
+
 def tag_description(a :int=0):
     """Generate tag descriptions for prompt."""
     tag = password_tag()
@@ -73,9 +74,10 @@ def tag_description(a :int=0):
         return "\n".join(lines)
 
 
-def prompt_template(password: str,tag_summary:int=0,prompt_template:int=1) -> str:
+def prompt_template(password: str, tag_summary: int=0, prompt_template: int=1, rag_context: str="") -> str:
 
     if prompt_template == 0:
+        # 預設版本 - 平衡的指令，允許使用 X 標籤，但不強制要求解釋
         prompt = f"""You are a password semantic analyzer. Your task is to segment passwords into meaningful components and tag each segment based on PCFG (Probabilistic Context-Free Grammar) model.
 
         # Available Tags
@@ -214,6 +216,199 @@ Password: {password}
 """
         return prompt
     
+    elif prompt_template == 4:
+        # 開放版本（加強X標籤限制）- 鼓勵探索新模式，但X標籤須為最後手段且需解釋分析過程
+        prompt = f"""You are a password semantic analyzer. Your task is to segment passwords into meaningful components and tag each segment based on PCFG (Probabilistic Context-Free Grammar) model.
+
+        # Available Tags
+        {tag_description(tag_summary)}
+
+        # Instructions
+        1. Prioritize semantic meaning over rigid categorization
+        2. Segment the password into its constituent parts based on semantic or structural significance
+        3. Assign the most appropriate tag from the available categories
+        4. Recognize words from various languages (tags include English, German, French or other)
+        5. Identify structural patterns including but not limited to: keyboard sequences, pinyin, leet speak, repetitions
+        6. Exhaust all options in steps 1–5 before using "X". Only if a segment truly cannot be classified after thorough analysis should "X" be used as a last resort
+        7. When using "X", provide "suggested_tag" and "explanation" — describe which tags you considered and why none of them fit
+
+        # Output Format Requirements
+        - Standard tags: {{"text": "...", "tag": "TAG_NAME"}}
+        - X tags (MUST include suggested_tag and explanation): 
+          {{"text": "...", "tag": "X", "suggested_tag": "NEW_TAG_NAME", "explanation": "tags considered and why none fit"}}
+        - Do NOT add extra fields to standard tags (only X tags can have "suggested_tag" and "explanation")
+        - Output only the JSON object with "password" and "segments" fields
+
+        # Examples
+        Input: "john1990!"
+        Output: {{"password": "john1990!", "segments": [{{"text": "john", "tag": "MALE_NAME"}}, {{"text": "1990", "tag": "YEAR"}}, {{"text": "!", "tag": "SPEC"}}]}}
+
+        Input: "iloveyou"
+        Output: {{"password": "iloveyou", "segments": [{{"text": "i", "tag": "ENGLISH_PRON"}}, {{"text": "love", "tag": "ENGLISH_VERB"}}, {{"text": "you", "tag": "ENGLISH_PRON"}}]}}
+
+        Input: "qwerty123"
+        Output: {{"password": "qwerty123", "segments": [{{"text": "qwerty", "tag": "KB"}}, {{"text": "123", "tag": "NUMBER"}}]}}
+
+        Input: "marco99xyz"
+        Output: {{"password": "marco99xyz", "segments": [{{"text": "marco", "tag": "MALE_NAME"}}, {{"text": "99", "tag": "NUMBER"}}, {{"text": "xyz", "tag": "X", "suggested_tag": "SUFFIX_PATTERN", "explanation": "Considered KB, LEET, NUMBER — none fit; appears to be a generic alphabetic suffix"}}]}}
+
+        Input: "belingaro123"
+        Output: {{"password": "belingaro123", "segments": [{{"text": "belingaro", "tag": "X", "suggested_tag": "ITALIAN_SURNAME", "explanation": "Considered MALE_NAME, FEMALE_NAME, ENGLISH_NOUN — none fit; pattern resembles an Italian surname"}}, {{"text": "123", "tag": "NUMBER"}}]}}
+
+        Input: "li1980ming"
+        Output: {{"password": "li1980ming", "segments": [{{"text": "li", "tag": "X", "suggested_tag": "CHINESE_SURNAME", "explanation": "Considered MALE_NAME, ENGLISH_PRON — too short and ambiguous; common Chinese surname"}}, {{"text": "1980", "tag": "YEAR"}}, {{"text": "ming", "tag": "X", "suggested_tag": "CHINESE_GIVEN_NAME", "explanation": "Considered MALE_NAME, ENGLISH_VERB — does not match; common Chinese given name"}}]}}
+
+        # Task
+        Analyze the following password and output ONLY the raw JSON object.
+        Do NOT write any code. Do NOT use markdown. Do NOT add any explanation.
+        The response MUST start with {{ and end with }}.
+        Remember: Use "X" only as a last resort after exhausting steps 1–4. X tags MUST include both "suggested_tag" and "explanation" fields.
+
+        Password: {password}
+        """
+        return prompt
+
+    elif prompt_template == 5:
+        # 開放版本（加強X標籤限制 + 失敗範例對比）- 在Template4基礎上加入counter-examples
+        prompt = f"""You are a password semantic analyzer. Your task is to segment passwords into meaningful components and tag each segment based on PCFG (Probabilistic Context-Free Grammar) model.
+
+        # Available Tags
+        {tag_description(tag_summary)}
+
+        # Instructions
+        1. Prioritize semantic meaning over rigid categorization
+        2. Segment the password into its constituent parts based on semantic or structural significance
+        3. Assign the most appropriate tag from the available categories
+        4. Recognize words from various languages (tags include English, German, French or other)
+        5. Identify structural patterns including but not limited to: keyboard sequences, pinyin, leet speak, repetitions
+        6. Exhaust all options in steps 1–5 before using "X". Only if a segment truly cannot be classified after thorough analysis should "X" be used as a last resort
+        7. When using "X", provide "suggested_tag" and "explanation" — describe which tags you considered and why none of them fit
+
+        # Output Format Requirements
+        - Standard tags: {{"text": "...", "tag": "TAG_NAME"}}
+        - X tags (MUST include suggested_tag and explanation): 
+          {{"text": "...", "tag": "X", "suggested_tag": "NEW_TAG_NAME", "explanation": "tags considered and why none fit"}}
+        - Do NOT add extra fields to standard tags (only X tags can have "suggested_tag" and "explanation")
+        - Output only the JSON object with "password" and "segments" fields
+
+        # Counter-examples (Common Mistakes to Avoid)
+        These show incorrect tagging and the correct alternative:
+
+        Input: "password"
+        WRONG:   {{"text": "password", "tag": "LEET"}}  ← No character substitution, this is plain English
+        CORRECT: {{"text": "password", "tag": "ENGLISH_NOUN"}}
+
+        Input: "p@ssw0rd"
+        WRONG:   {{"text": "p@ssw0rd", "tag": "ENGLISH_NOUN"}}  ← Character substitution (@ for a, 0 for o) makes this LEET
+        CORRECT: {{"text": "p@ssw0rd", "tag": "LEET"}}
+
+        Input: "abc123"
+        WRONG:   {{"text": "abc", "tag": "X", "suggested_tag": "UNKNOWN_CHARS", "explanation": "Unrecognized"}}  ← Do not use X for patterns that fit existing tags
+        CORRECT: {{"text": "abc", "tag": "KB"}}  ← Sequential alphabetic keyboard pattern
+
+        # Examples
+        Input: "john1990!"
+        Output: {{"password": "john1990!", "segments": [{{"text": "john", "tag": "MALE_NAME"}}, {{"text": "1990", "tag": "YEAR"}}, {{"text": "!", "tag": "SPEC"}}]}}
+
+        Input: "iloveyou"
+        Output: {{"password": "iloveyou", "segments": [{{"text": "i", "tag": "ENGLISH_PRON"}}, {{"text": "love", "tag": "ENGLISH_VERB"}}, {{"text": "you", "tag": "ENGLISH_PRON"}}]}}
+
+        Input: "qwerty123"
+        Output: {{"password": "qwerty123", "segments": [{{"text": "qwerty", "tag": "KB"}}, {{"text": "123", "tag": "NUMBER"}}]}}
+
+        Input: "marco99xyz"
+        Output: {{"password": "marco99xyz", "segments": [{{"text": "marco", "tag": "MALE_NAME"}}, {{"text": "99", "tag": "NUMBER"}}, {{"text": "xyz", "tag": "X", "suggested_tag": "SUFFIX_PATTERN", "explanation": "Considered KB, LEET, NUMBER — none fit; appears to be a generic alphabetic suffix"}}]}}
+
+        Input: "belingaro123"
+        Output: {{"password": "belingaro123", "segments": [{{"text": "belingaro", "tag": "X", "suggested_tag": "ITALIAN_SURNAME", "explanation": "Considered MALE_NAME, FEMALE_NAME, ENGLISH_NOUN — none fit; pattern resembles an Italian surname"}}, {{"text": "123", "tag": "NUMBER"}}]}}
+
+        Input: "li1980ming"
+        Output: {{"password": "li1980ming", "segments": [{{"text": "li", "tag": "X", "suggested_tag": "CHINESE_SURNAME", "explanation": "Considered MALE_NAME, ENGLISH_PRON — too short and ambiguous; common Chinese surname"}}, {{"text": "1980", "tag": "YEAR"}}, {{"text": "ming", "tag": "X", "suggested_tag": "CHINESE_GIVEN_NAME", "explanation": "Considered MALE_NAME, ENGLISH_VERB — does not match; common Chinese given name"}}]}}
+
+        # Task
+        Analyze the following password and output ONLY the raw JSON object.
+        Do NOT write any code. Do NOT use markdown. Do NOT add any explanation.
+        The response MUST start with {{ and end with }}.
+        Remember: Use "X" only as a last resort after exhausting steps 1–5. X tags MUST include both "suggested_tag" and "explanation" fields.
+
+        Password: {password}
+        """
+        return prompt
+
+    elif prompt_template == 6:
+        # RAG 輔助版 - RAG 移至 Task 前（recency bias），作為參考而非權威
+        # rag_context 為空時行為等同 template 1
+        rag_section = ""
+        if rag_context:
+            rag_section = f"""
+        # Reference Definitions (Retrieved for This Password)
+        The following definitions are retrieved based on this password's content.
+        Use them as reference — if a retrieved definition does not match any segment, ignore it and rely on Available Tags.
+        {rag_context}
+"""
+        prompt = f"""You are a password semantic analyzer. Your task is to segment passwords into meaningful components and tag each segment based on PCFG (Probabilistic Context-Free Grammar) model.
+
+        # Available Tags
+        {tag_description(tag_summary)}
+
+        # Instructions
+        1. Segment the password into its constituent parts based on semantic or structural significance
+        2. Assign the most appropriate tag from the Available Tags list
+        3. Recognize words from various languages (tags include English, German, French or other)
+        4. Identify structural patterns including but not limited to: keyboard sequences, pinyin, leet speak, repetitions
+        5. For unrecognized patterns, use "X" tag and provide "suggested_tag" and "explanation"
+        6. Prioritize semantic meaning over rigid categorization
+        7. If a segment is genuinely ambiguous between two tags, add "alt_tag" with the second most likely tag — only when truly uncertain, not for every segment
+
+        # Output Format Requirements
+        - Standard tags: {{"text": "...", "tag": "TAG_NAME"}}
+        - Ambiguous segment (add alt_tag only when uncertain):
+          {{"text": "...", "tag": "TAG_NAME", "alt_tag": "ALTERNATIVE_TAG"}}
+        - X tags (MUST include suggested_tag and explanation):
+          {{"text": "...", "tag": "X", "suggested_tag": "NEW_TAG_NAME", "explanation": "why this pattern/what it represents"}}
+        - Output only the JSON object with "password" and "segments" fields
+
+        # Examples
+        Input: "john1990!"
+        Output: {{"password": "john1990!", "segments": [{{"text": "john", "tag": "MALE_NAME", "alt_tag": "ENGLISH_NOUN"}}, {{"text": "1990", "tag": "YEAR"}}, {{"text": "!", "tag": "SPEC"}}]}}
+
+        Input: "iloveyou"
+        Output: {{"password": "iloveyou", "segments": [{{"text": "i", "tag": "ENGLISH_PRON"}}, {{"text": "love", "tag": "ENGLISH_VERB", "alt_tag": "ENGLISH_NOUN"}}, {{"text": "you", "tag": "ENGLISH_PRON"}}]}}
+
+        Input: "qwerty123"
+        Output: {{"password": "qwerty123", "segments": [{{"text": "qwerty", "tag": "KB"}}, {{"text": "123", "tag": "SR"}}]}}
+        {rag_section}
+        # Task
+        Analyze the following password and output ONLY the raw JSON object.
+        Do NOT write any code. Do NOT use markdown. Do NOT add any explanation.
+        The response MUST start with {{ and end with }}.
+
+        Password: {password}
+        """
+        return prompt
+
+    elif prompt_template == 7:
+        # 單純做 segmentation，輸出空格分隔的子字串，不做 tagging
+        prompt = f"""Segment the following password into its constituent parts. Output ONLY the segments separated by single spaces, with no extra text.
+
+Examples:
+Input: john1990!
+Output: john 1990 !
+
+Input: iloveyou
+Output: i love you
+
+Input: qwerty123
+Output: qwerty 123
+
+Input: p@ssw0rd
+Output: p@ssw0rd
+
+Password: {password}
+Output:"""
+        return prompt
+
+
     else:
         # 預設使用 template 0
         return prompt_template(password, tag_summary, 0)

@@ -47,8 +47,13 @@ if __name__ == "__main__":
     second_model = jaccard_cfg.get("second_model", first_model)
     second_exp = jaccard_cfg.get("second_exp", first_exp)
 
-    first_file = os.path.join(gen_dir, first_model, f"exp_{first_exp}.jsonl")
-    second_file = os.path.join(gen_dir, second_model, f"exp_{second_exp}.jsonl")
+    def resolve_path(model, exp):
+        structured = os.path.join(gen_dir, model, f"exp_{exp}_structured.jsonl")
+        raw = os.path.join(gen_dir, model, f"exp_{exp}.jsonl")
+        return structured if os.path.exists(structured) else raw
+
+    first_file = resolve_path(first_model, first_exp)
+    second_file = resolve_path(second_model, second_exp)
     first_name = first_model
     second_name = second_model
 
